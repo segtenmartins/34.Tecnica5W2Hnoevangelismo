@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5W2H Evangelístico - Método Bíblico de Evangelismo | VIRE</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap');
+        
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --accent: #f59e0b;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --vire-v: #ef4444;
+    --vire-i: #3b82f6;
+    --vire-r: #10b981;
+    --vire-e: #a855f7;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.font-serif {
+    font-family: 'Merriweather', serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.95) 0%, rgba(30, 64, 175, 0.95) 50%, rgba(15, 23, 42, 0.98) 100%);
+}
+
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.4);
+}
+
+.verse-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.vire-gradient {
+    background: linear-gradient(135deg, #ef4444 0%, #3b82f6 25%, #10b981 50%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.5), transparent);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.5);
+}
+
+.vire-badge {
+    background: linear-gradient(135deg, #ef4444 0%, #3b82f6 33%, #10b981 66%, #a855f7 100%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.question-badge {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.vire-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.vire-tag-v { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); }
+.vire-tag-i { background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4); }
+.vire-tag-r { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+.vire-tag-e { background: rgba(168, 85, 247, 0.2); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.4); }
+
+.vire-card-v { border-left: 4px solid var(--vire-v); }
+.vire-card-i { border-left: 4px solid var(--vire-i); }
+.vire-card-r { border-left: 4px solid var(--vire-r); }
+.vire-card-e { border-left: 4px solid var(--vire-e); }
+
+.scroll-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.print-only {
+    display: none;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    .print-only {
+        display: block;
+    }
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+</style>
+</head>
+<body class="text-slate-100 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-lg border-b border-slate-800 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-cross text-2xl text-amber-500"></i>
+                    <span class="font-bold text-xl gradient-text">5W2H Evangelístico</span>
+                    <span class="vire-badge hidden sm:inline-block px-3 py-1 rounded-full text-xs font-bold text-white">Método VIRE</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition">Início</a>
+                    <a href="#metodo" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition">O Método</a>
+                    <a href="#vire" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition">VIRE</a>
+                    <a href="#estrategia" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition">Estratégia</a>
+                    <a href="#aplicacao" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition">Aplicação</a>
+                </div>
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#inicio" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded text-slate-300 hover:bg-slate-700">Início</a>
+                <a href="#metodo" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded text-slate-300 hover:bg-slate-700">O Método</a>
+                <a href="#vire" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded text-slate-300 hover:bg-slate-700">VIRE</a>
+                <a href="#estrategia" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded text-slate-300 hover:bg-slate-700">Estratégia</a>
+                <a href="#aplicacao" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded text-slate-300 hover:bg-slate-700">Aplicação</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+            <div class="text-center animate-fade-in">
+                <div class="inline-flex flex-wrap gap-3 justify-center mb-6">
+                    <span class="px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-amber-400 text-sm font-semibold">
+                        <i class="fas fa-bible mr-2"></i>Método Bíblico de Evangelismo
+                    </span>
+                    <span class="vire-badge px-4 py-2 rounded-full text-white text-sm font-semibold">
+                        <i class="fas fa-table mr-2"></i>Mnemônica VIRE
+                    </span>
+                </div>
+                
+                <h1 class="hero-title font-serif font-black text-5xl md:text-7xl mb-6 leading-tight">
+                    <span class="gradient-text">5W2H</span><br>
+                    <span class="text-white">Evangelístico</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+                    7 perguntas + 4 dimensões <span class="vire-gradient font-bold">VIRE</span> que quebram objeções e apontam pra Jesus
+                </p>
+                
+                <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+                    "Sede sóbrios e vigilantes. O diabo, vosso adversário, anda em derredor, como leão que ruge procurando alguém para devorar." 
+                    <span class="text-amber-400 font-semibold">1 Pedro 5:8</span>
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#metodo" class="btn-primary px-8 py-4 rounded-lg font-semibold text-white inline-flex items-center">
+                        <i class="fas fa-book-open mr-2"></i>
+                        Descubra o Método
+                    </a>
+                    <button onclick="downloadPDF()" class="px-8 py-4 rounded-lg font-semibold text-white bg-slate-700 hover:bg-slate-600 transition inline-flex items-center">
+                        <i class="fas fa-download mr-2"></i>
+                        Baixar Guia PDF
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-20">
+                <div class="verse-card rounded-xl p-6 text-center card-hover">
+                    <div class="text-4xl font-bold gradient-text mb-2">7</div>
+                    <div class="text-slate-400 text-sm">Perguntas 5W2H</div>
+                </div>
+                <div class="verse-card rounded-xl p-6 text-center card-hover">
+                    <div class="text-4xl font-bold vire-gradient mb-2">4</div>
+                    <div class="text-slate-400 text-sm">Dimensões VIRE</div>
+                </div>
+                <div class="verse-card rounded-xl p-6 text-center card-hover">
+                    <div class="text-4xl font-bold gradient-text mb-2">100%</div>
+                    <div class="text-slate-400 text-sm">Base Bíblica</div>
+                </div>
+                <div class="verse-card rounded-xl p-6 text-center card-hover">
+                    <div class="text-4xl font-bold gradient-text mb-2">∞</div>
+                    <div class="text-slate-400 text-sm">Impacto Eterno</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="metodo" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider">Fundamentação</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-4 mb-6">Por Que <span class="gradient-text">5W2H</span>?</h2>
+                <div class="section-divider w-24 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="verse-card rounded-xl p-8">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-blue-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Chamado de Todos</h3>
+                            <p class="text-slate-300 leading-relaxed">
+                                "Nenhum de nós vive para si mesmo, nem morre para si. Porque, se vivemos, para o Senhor vivemos; se morremos, para o Senhor morremos."
+                                <span class="block mt-2 text-amber-400 font-semibold">Romanos 14:7-8</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card rounded-xl p-8">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-fire text-amber-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Urgência Evangélica</h3>
+                            <p class="text-slate-300 leading-relaxed">
+                                "Como, porém, invocarão aquele em quem não creram? E como crerão naquele de quem nada ouviram? E como ouvirão, se não há quem pregue?"
+                                <span class="block mt-2 text-amber-400 font-semibold">Romanos 10:14</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="verse-card rounded-xl p-8 md:p-12">
+                <h3 class="text-2xl font-bold mb-6 text-center">A Estratégia do Inimigo</h3>
+                <p class="text-slate-300 text-lg leading-relaxed text-center max-w-4xl mx-auto">
+                    O diabo é estratégico e organizado. Ele não descansa. Por isso, nós também precisamos ser estratégicos, organizados e incansáveis na proclamação do Evangelho. O método 5W2H nos ajuda a planejar com sabedoria e executar com propósito.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIRE Mnemonic Section -->
+    <section id="vire" class="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-400 font-semibold text-sm uppercase tracking-wider">Mnemônica Estratégica</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-4 mb-6"><span class="vire-gradient">VIRE</span>: A Mesa da Conversão</h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+                <p class="text-slate-300 text-lg max-w-3xl mx-auto">
+                    Pra lembrar fácil, use <span class="vire-gradient font-bold">VIRE</span> - as 4 pernas da mesa que sustentam uma conversão real:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- V - Vontade -->
+                <div class="verse-card vire-card-v rounded-xl p-6 card-hover">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4" style="background: rgba(239, 68, 68, 0.2);">
+                        <span class="text-4xl font-black" style="color: var(--vire-v);">V</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-3" style="color: var(--vire-v);">Vontade</h3>
+                    <div class="space-y-2 text-center">
+                        <p class="text-slate-300 font-semibold">Quanto custa?</p>
+                        <p class="text-slate-400 text-sm">O quê você quer?</p>
+                        <p class="text-slate-400 text-sm">Você está disposto?</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50">
+                        <p class="text-xs text-slate-400 text-center italic">
+                            <i class="fas fa-key mr-1"></i>Decisão e Custo
+                        </p>
+                    </div>
+                </div>
+
+                <!-- I - Intelecto -->
+                <div class="verse-card vire-card-i rounded-xl p-6 card-hover">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4" style="background: rgba(59, 130, 246, 0.2);">
+                        <span class="text-4xl font-black" style="color: var(--vire-i);">I</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-3" style="color: var(--vire-i);">Intelecto</h3>
+                    <div class="space-y-2 text-center">
+                        <p class="text-slate-300 font-semibold">Como funciona?</p>
+                        <p class="text-slate-400 text-sm">Por quê é verdade?</p>
+                        <p class="text-slate-400 text-sm">Quando/Onde?</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50">
+                        <p class="text-xs text-slate-400 text-center italic">
+                            <i class="fas fa-brain mr-1"></i>Razão e Lógica
+                        </p>
+                    </div>
+                </div>
+
+                <!-- R - Relacionamento -->
+                <div class="verse-card vire-card-r rounded-xl p-6 card-hover">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4" style="background: rgba(16, 185, 129, 0.2);">
+                        <span class="text-4xl font-black" style="color: var(--vire-r);">R</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-3" style="color: var(--vire-r);">Relacionamento</h3>
+                    <div class="space-y-2 text-center">
+                        <p class="text-slate-300 font-semibold">Quem te convida?</p>
+                        <p class="text-slate-400 text-sm">Quem você conhece?</p>
+                        <p class="text-slate-400 text-sm">Com quem você vai?</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50">
+                        <p class="text-xs text-slate-400 text-center italic">
+                            <i class="fas fa-handshake mr-1"></i>Conexão e Comunidade
+                        </p>
+                    </div>
+                </div>
+
+                <!-- E - Emoção -->
+                <div class="verse-card vire-card-e rounded-xl p-6 card-hover">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4" style="background: rgba(168, 85, 247, 0.2);">
+                        <span class="text-4xl font-black" style="color: var(--vire-e);">E</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-3" style="color: var(--vire-e);">Emoção</h3>
+                    <div class="space-y-2 text-center">
+                        <p class="text-slate-300 font-semibold">Como você se sente?</p>
+                        <p class="text-slate-400 text-sm">Por quê isso importa?</p>
+                        <p class="text-slate-400 text-sm">O que te move?</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50">
+                        <p class="text-xs text-slate-400 text-center italic">
+                            <i class="fas fa-heart mr-1"></i>Sentimento e Paixão
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mesa da Conversão Visual -->
+            <div class="verse-card rounded-xl p-8 md:p-12 mb-12">
+                <div class="text-center mb-8">
+                    <i class="fas fa-table text-5xl mb-4 vire-gradient"></i>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">A Mesa Precisa das 4 Pernas</h3>
+                </div>
+                <p class="text-slate-300 text-lg leading-relaxed text-center max-w-4xl mx-auto mb-6">
+                    Uma mesa com menos de 4 pernas não fica em pé. Da mesma forma, uma conversão genuína precisa tocar as 4 dimensões do ser humano: 
+                    <span class="font-semibold" style="color: var(--vire-v);">Vontade</span>, 
+                    <span class="font-semibold" style="color: var(--vire-i);">Intelecto</span>, 
+                    <span class="font-semibold" style="color: var(--vire-r);">Relacionamento</span> e 
+                    <span class="font-semibold" style="color: var(--vire-e);">Emoção</span>.
+                </p>
+                <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                    <p class="text-xl font-semibold text-center leading-relaxed">
+                        <span class="vire-gradient font-bold">VIRE não é decoreba. É conversão:</span><br>
+                        <span class="text-slate-300">Vontade rendida, Intelecto convencido,</span><br>
+                        <span class="text-slate-300">Relacionamento iniciado, Emoção transformada.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Base Bíblica VIRE -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="verse-card rounded-xl p-6">
+                    <h4 class="text-lg font-bold mb-3 text-amber-400">
+                        <i class="fas fa-quote-left mr-2"></i>Amar a Deus por Inteiro
+                    </h4>
+                    <p class="text-slate-300 italic leading-relaxed mb-2">
+                        "Amarás o Senhor teu Deus de todo o teu coração <span class="text-purple-400">(Emoção)</span>, de toda a tua alma <span class="text-red-400">(Vontade)</span>, de todo o teu entendimento <span class="text-blue-400">(Intelecto)</span> e de todas as tuas forças <span class="text-green-400">(Relacionamento)</span>."
+                    </p>
+                    <p class="text-amber-400 font-semibold">Marcos 12:30</p>
+                </div>
+                <div class="verse-card rounded-xl p-6">
+                    <h4 class="text-lg font-bold mb-3 text-amber-400">
+                        <i class="fas fa-quote-left mr-2"></i>Discipulado Completo
+                    </h4>
+                    <p class="text-slate-300 italic leading-relaxed mb-2">
+                        "Se alguém quer vir após mim, negue-se a si mesmo <span class="text-red-400">(Vontade)</span>, tome diariamente a sua cruz <span class="text-blue-400">(Intelecto)</span> e siga-me <span class="text-green-400">(Relacionamento)</span>."
+                    </p>
+                    <p class="text-amber-400 font-semibold">Lucas 9:23</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is 5W2H Section -->
+    <section class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider">O Conceito</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-4 mb-6">O Que é <span class="gradient-text">5W2H</span>?</h2>
+                <div class="section-divider w-24 mx-auto"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="verse-card rounded-xl p-8 md:p-12 mb-12">
+                    <p class="text-xl text-slate-300 leading-relaxed mb-6">
+                        O <span class="text-amber-400 font-semibold">5W2H</span> é uma ferramenta de gestão que responde a sete perguntas fundamentais para estruturar um plano de ação completo. 
+                    </p>
+                    <p class="text-lg text-slate-400 leading-relaxed">
+                        Quando aplicado ao evangelismo e combinado com a mnemônica <span class="vire-gradient font-bold">VIRE</span>, transforma intenção em estratégia, paixão em plano, e desejo em ação disciplinada para alcançar vidas com o Evangelho de Jesus Cristo.
+                    </p>
+                </div>
+
+                <!-- Mnemônico Atualizado - Nova Ordem -->
+                <div class="bg-slate-800/50 rounded-xl p-6 border-2 border-amber-500/30">
+                    <h3 class="text-center text-2xl font-bold mb-6 text-amber-400">
+                        <i class="fas fa-lightbulb mr-2"></i>Mnemônico Atualizado
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+                        <div class="question-badge rounded-lg p-4 text-center">
+                            <div class="text-xs font-bold text-white mb-1">1</div>
+                            <div class="text-sm font-semibold text-white">WHAT</div>
+                        </div>
+                        <div class="question-badge rounded-lg p-4 text-center" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%);">
+                            <div class="text-xs font-bold text-white mb-1">2</div>
+                            <div class="text-sm font-semibold text-white">WHEN</div>
+                        </div>
+                        <div class="question-badge rounded-lg p-4 text-center" style="background: linear-gradient(135deg, #b45309 0%, #92400e 100%);">
+                            <div class="text-xs font-bold text-white mb-1">3</div>
+                            <div class="text-sm font-semibold text-white">WHERE</div>
+                        </div>
+                        <div class="question-badge rounded-lg p-4 text-center" style="background: linear-gradient(135deg, #92400e 0%, #78350f 100%);">
+                            <div class="text-xs font-bold text-white mb-1">4</div>
+                            <div class="text-sm font-semibold text-white">WHO</div>
+                        </div>
+                        <div class="question-badge rounded-lg p-4 text-center" style="background: linear-gradient(135deg, #78350f 0%, #451a03 100%);">
+                            <div class="text-xs font-bold text-white mb-1">5</div>
+                            <div class="text-sm font-semibold text-white">WHY</div>
+                        </div>
+                        <div class="question-badge rounded-lg p-4 text-center" style="background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);">
+                            <div class="text-xs font-bold text-white mb-1">6</div>
+                            <div class="text-sm font-semibold text-white">HOW</div>
+                        </div>
+                        <div class="question-badge rounded-lg p-4 text-center" style="background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);">
+                            <div class="text-xs font-bold text-white mb-1">7</div>
+                            <div class="text-sm font-semibold text-white">HOW MUCH</div>
+                        </div>
+                    </div>
+                    <p class="text-center text-slate-400 text-sm mt-6">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        Nova sequência mnemônica: O Quê → Quando → Onde → Quem → Por Quê → Como → Quanto
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 5W2H Strategy - Nova Ordem com Tags VIRE -->
+    <section id="estrategia" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider">Detalhamento</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-4 mb-6">As <span class="gradient-text">7 Perguntas</span> + <span class="vire-gradient">VIRE</span></h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    Cada pergunta é fundamentada na Palavra de Deus, direcionada para a Grande Comissão e conectada às dimensões VIRE
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- 1. WHAT -->
+                <div id="what" class="verse-card rounded-xl overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl font-bold">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">WHAT - O Quê</h3>
+                                <p class="text-blue-100 text-sm">O que vamos fazer?</p>
+                            </div>
+                        </div>
+                        <span class="vire-tag vire-tag-v">V - Vontade</span>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-quote-left mr-2"></i>Base Bíblica
+                            </h4>
+                            <p class="text-slate-300 italic leading-relaxed mb-2">
+                                "Ide, portanto, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo; ensinando-os a guardar todas as coisas que vos tenho ordenado."
+                            </p>
+                            <p class="text-amber-400 font-semibold">Mateus 28:19-20</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-3 text-blue-400">
+                                <i class="fas fa-target mr-2"></i>Ação Prática
+                            </h4>
+                            <p class="text-slate-300 leading-relaxed">
+                                Evangelizar. Proclamar Jesus Cristo para não cristãos através do testemunho pessoal, pregação do Evangelho e demonstração do amor de Deus. Fazer discípulos, não apenas convertidos.
+                            </p>
+                        </div>
+                        <div class="bg-red-500/10 border-l-4 border-red-500 rounded p-3">
+                            <p class="text-sm text-slate-300">
+                                <span class="font-bold text-red-400">VIRE - Vontade:</span> O "quê" exige decisão. Você quer obedecer a Cristo? Está disposto a priorizar isso?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHEN -->
+                <div id="when" class="verse-card rounded-xl overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-amber-600 to-amber-700 px-6 py-4 flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl font-bold">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">WHEN - Quando</h3>
+                                <p class="text-amber-100 text-sm">Quando vamos fazer?</p>
+                            </div>
+                        </div>
+                        <span class="vire-tag vire-tag-i">I - Intelecto</span>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-quote-left mr-2"></i>Base Bíblica
+                            </h4>
+                            <p class="text-slate-300 italic leading-relaxed mb-2">
+                                "Urge a palavra, insta, quer seja oportuno, quer não, corrige, repreende, exorta com toda a longanimidade e doutrina."
+                            </p>
+                            <p class="text-amber-400 font-semibold">2 Timóteo 4:2</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-clock mr-2"></i>Ação Prática
+                            </h4>
+                            <p class="text-slate-300 leading-relaxed">
+                                Sempre. Evitar a procrastinação. Aproveitar cada oportunidade. Ser intencional em criar momentos de evangelismo. Hoje é o dia da salvação.
+                            </p>
+                        </div>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded p-3">
+                            <p class="text-sm text-slate-300">
+                                <span class="font-bold text-blue-400">VIRE - Intelecto:</span> O "quando" requer sabedoria. Você entende a urgência? Compreende que o tempo urge?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. WHERE -->
+                <div id="where" class="verse-card rounded-xl overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-yellow-700 to-amber-800 px-6 py-4 flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl font-bold">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">WHERE - Onde</h3>
+                                <p class="text-amber-100 text-sm">Onde vamos fazer?</p>
+                            </div>
+                        </div>
+                        <span class="vire-tag vire-tag-i">I - Intelecto</span>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-quote-left mr-2"></i>Base Bíblica
+                            </h4>
+                            <p class="text-slate-300 italic leading-relaxed mb-2">
+                                "Mas recebereis poder, ao descer sobre vós o Espírito Santo, e sereis minhas testemunhas tanto em Jerusalém como em toda a Judéia e Samaria e até aos confins da terra."
+                            </p>
+                            <p class="text-amber-400 font-semibold">Atos 1:8</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-map-marked-alt mr-2"></i>Ação Prática
+                            </h4>
+                            <p class="text-slate-300 leading-relaxed">
+                                Em todos os lugares. Casa, trabalho, escola, mercado, redes sociais. Comece onde você está (Jerusalém), expanda para sua região (Judeia), alcance os diferentes (Samaria) e vá até os confins da terra.
+                            </p>
+                        </div>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded p-3">
+                            <p class="text-sm text-slate-300">
+                                <span class="font-bold text-blue-400">VIRE - Intelecto:</span> O "onde" exige estratégia. Você conhece seu campo missionário? Sabe mapear oportunidades?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. WHO -->
+                <div id="who" class="verse-card rounded-xl overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-orange-700 to-red-800 px-6 py-4 flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl font-bold">4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">WHO - Quem</h3>
+                                <p class="text-orange-100 text-sm">Quem vai fazer e para quem?</p>
+                            </div>
+                        </div>
+                        <span class="vire-tag vire-tag-r">R - Relacionamento</span>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-quote-left mr-2"></i>Base Bíblica
+                            </h4>
+                            <p class="text-slate-300 italic leading-relaxed mb-2">
+                                "Porque para Deus não há acepção de pessoas. Pois todos pecaram e carecem da glória de Deus."
+                            </p>
+                            <p class="text-amber-400 font-semibold">Romanos 2:11; 3:23</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-3 text-orange-400">
+                                <i class="fas fa-user-friends mr-2"></i>Ação Prática
+                            </h4>
+                            <p class="text-slate-300 leading-relaxed">
+                                Todos os cristãos (igreja) para todas as pessoas (sem exceção). Cada pecador precisa do Salvador. Deus não faz acepção - nem nós devemos fazer. Alcance ricos e pobres, velhos e jovens.
+                            </p>
+                        </div>
+                        <div class="bg-green-500/10 border-l-4 border-green-500 rounded p-3">
+                            <p class="text-sm text-slate-300">
+                                <span class="font-bold text-green-400">VIRE - Relacionamento:</span> O "quem" é sobre conexão. Quem Deus colocou no seu caminho? Quem você influencia?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. WHY -->
+                <div id="why" class="verse-card rounded-xl overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-4 flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl font-bold">5</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">WHY - Por Quê</h3>
+                                <p class="text-purple-100 text-sm">Por que vamos fazer?</p>
+                            </div>
+                        </div>
+                        <span class="vire-tag vire-tag-i">I - Intelecto</span>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-quote-left mr-2"></i>Base Bíblica
+                            </h4>
+                            <p class="text-slate-300 italic leading-relaxed mb-2">
+                                "Porque, se anuncio o evangelho, não tenho de que me gloriar, pois sobre mim pesa essa obrigação; porque ai de mim se não pregar o evangelho!"
+                            </p>
+                            <p class="text-amber-400 font-semibold">1 Coríntios 9:16</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-3 text-purple-400">
+                                <i class="fas fa-heart mr-2"></i>Ação Prática
+                            </h4>
+                            <p class="text-slate-300 leading-relaxed">
+                                Por amor obediente a Jesus. Por compaixão às almas perdidas. Por gratidão ao que Cristo fez por nós. É nossa responsabilidade e privilégio. Ai de nós se não pregarmos!
+                            </p>
+                        </div>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded p-3">
+                            <p class="text-sm text-slate-300">
+                                <span class="font-bold text-blue-400">VIRE - Intelecto:</span> O "por quê" precisa convencer. Você sabe articular as razões bíblicas? Entende a lógica do Evangelho?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. HOW -->
+                <div id="how" class="verse-card rounded-xl overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-indigo-700 to-blue-800 px-6 py-4 flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl font-bold">6</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">HOW - Como</h3>
+                                <p class="text-indigo-100 text-sm">Como vamos fazer?</p>
+                            </div>
+                        </div>
+                        <span class="vire-tag vire-tag-i">I - Intelecto</span>
+                        <span class="vire-tag vire-tag-e">E - Emoção</span>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-quote-left mr-2"></i>Base Bíblica
+                            </h4>
+                            <p class="text-slate-300 italic leading-relaxed mb-2">
+                                "Antes, santificai a Cristo, como Senhor, em vosso coração, estando sempre preparados para responder a todo aquele que vos pedir razão da esperança que há em vós, fazendo-o, todavia, com mansidão e temor."
+                            </p>
+                            <p class="text-amber-400 font-semibold">1 Pedro 3:15</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-3 text-indigo-400">
+                                <i class="fas fa-tools mr-2"></i>Ação Prática
+                            </h4>
+                            <p class="text-slate-300 leading-relaxed">
+                                Com preparo, mansidão e temor. Use sua vida como testemunho. Conheça a Palavra. Seja sábio como a serpente e simples como a pomba. Adapte sua abordagem sem comprometer a mensagem.
+                            </p>
+                        </div>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded p-3 mb-2">
+                            <p class="text-sm text-slate-300">
+                                <span class="font-bold text-blue-400">VIRE - Intelecto:</span> O "como" exige método. Você sabe defender sua fé? Tem respostas preparadas?
+                            </p>
+                        </div>
+                        <div class="bg-purple-500/10 border-l-4 border-purple-500 rounded p-3">
+                            <p class="text-sm text-slate-300">
+                                <span class="font-bold text-purple-400">VIRE - Emoção:</span> O "como" também é coração. Você compartilha com mansidão? Com compaixão genuína?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. HOW MUCH -->
+                <div id="howmuch" class="verse-card rounded-xl overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-slate-700 to-slate-800 px-6 py-4 flex items-center justify-between flex-wrap gap-3">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl font-bold">7</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">HOW MUCH - Quanto</h3>
+                                <p class="text-slate-100 text-sm">Quanto vai custar?</p>
+                            </div>
+                        </div>
+                        <span class="vire-tag vire-tag-v">V - Vontade</span>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-3 text-amber-400">
+                                <i class="fas fa-quote-left mr-2"></i>Base Bíblica
+                            </h4>
+                            <p class="text-slate-300 italic leading-relaxed mb-2">
+                                "Assim, pois, todo aquele que dentre vós não renuncia a tudo quanto tem não pode ser meu discípulo."
+                            </p>
+                            <p class="text-amber-400 font-semibold">Lucas 14:33</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-3 text-slate-400">
+                                <i class="fas fa-coins mr-2"></i>Ação Prática
+                            </h4>
+                            <p class="text-slate-300 leading-relaxed">
+                                Custa tudo: tempo, recursos, conforto, reputação, relacionamentos. Mas o prêmio é incomparável - vidas transformadas e eternidade com Cristo. O custo do discipulado é alto, mas vale cada investimento.
+                            </p>
+                        </div>
+                        <div class="bg-red-500/10 border-l-4 border-red-500 rounded p-3">
+                            <p class="text-sm text-slate-300">
+                                <span class="font-bold text-red-400">VIRE - Vontade:</span> O "quanto" testa a decisão. Você está disposto a pagar o preço? Sua vontade está rendida?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section id="aplicacao" class="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider">Prática</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-4 mb-6">Como <span class="gradient-text">Aplicar</span> Hoje</h2>
+                <div class="section-divider w-24 mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="verse-card rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-pencil-alt text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">1. Liste Nomes</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Escreva o nome de 3 pessoas que ainda não conhecem a Cristo e ore por elas diariamente.
+                    </p>
+                </div>
+
+                <div class="verse-card rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-check text-amber-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">2. Defina Data</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Escolha um dia e horário específicos desta semana para compartilhar o Evangelho com alguém.
+                    </p>
+                </div>
+
+                <div class="verse-card rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-book text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">3. Prepare-se</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Estude João 3:16, Romanos 10:9-10 e tenha seu testemunho pessoal pronto para compartilhar.
+                    </p>
+                </div>
+
+                <div class="verse-card rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-hands-helping text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">4. Sirva Primeiro</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Demonstre o amor de Cristo através de atos práticos antes de proclamar com palavras.
+                    </p>
+                </div>
+
+                <div class="verse-card rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">5. Preste Contas</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Compartilhe seu compromisso com outro cristão e peçam contas um ao outro sobre evangelismo.
+                    </p>
+                </div>
+
+                <div class="verse-card rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-pray text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">6. Ore Sempre</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Peça ao Espírito Santo ousadia, sabedoria e oportunidades para testemunhar de Cristo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="verse-card rounded-xl p-8 md:p-12 text-center">
+                <i class="fas fa-exclamation-circle text-4xl text-amber-500 mb-4"></i>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">O Chamado É Urgente</h3>
+                <p class="text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto mb-6">
+                    "A seara, na verdade, é grande, mas os trabalhadores são poucos. Rogai, pois, ao Senhor da seara que mande trabalhadores para a sua seara."
+                </p>
+                <p class="text-amber-400 font-semibold text-xl mb-8">Mateus 9:37-38</p>
+                
+                <button onclick="scrollToTop()" class="btn-primary px-8 py-4 rounded-lg font-semibold text-white inline-flex items-center">
+                    <i class="fas fa-fire mr-2"></i>
+                    Começar Agora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <i class="fas fa-cross text-2xl text-amber-500"></i>
+                    <span class="font-bold text-xl gradient-text">5W2H Evangelístico</span>
+                </div>
+                <p class="text-slate-300 mb-2 font-semibold">
+                    <span class="vire-gradient">VIRE:</span> Vontade, Intelecto, Relacionamento, Emoção = Conversão real
+                </p>
+                <p class="text-slate-400 mb-6">
+                    "Portanto, ide, fazei discípulos de todas as nações..." - Mateus 28:19
+                </p>
+                <div class="flex justify-center flex-wrap gap-4 md:gap-6 mb-8">
+                    <a href="#inicio" class="text-slate-400 hover:text-white transition">Início</a>
+                    <a href="#metodo" class="text-slate-400 hover:text-white transition">Método</a>
+                    <a href="#vire" class="text-slate-400 hover:text-white transition">VIRE</a>
+                    <a href="#estrategia" class="text-slate-400 hover:text-white transition">Estratégia</a>
+                    <a href="#aplicacao" class="text-slate-400 hover:text-white transition">Aplicação</a>
+                </div>
+                <div class="section-divider mb-6"></div>
+                <p class="text-slate-500 text-sm">
+                    © 2025 5W2H Evangelístico. Desenvolvido para a glória de Deus e expansão do Reino.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" class="scroll-to-top fixed bottom-8 right-8 w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white shadow-lg no-print z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/Hide Scroll to Top Button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('scrollTopBtn');
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+
+            // Update active nav link
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Download PDF Function
+        function downloadPDF() {
+            window.print();
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.verse-card, .card-hover').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+</body>
+</html>

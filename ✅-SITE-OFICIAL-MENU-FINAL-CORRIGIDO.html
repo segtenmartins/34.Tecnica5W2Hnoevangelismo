@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5W2H Evangelístico - Do 'Universo' a Jesus | Rádio Mateus 6:33</title>
+<style>
+:root {
+  --primary: #0a2342;
+  --primary-light: #1d4e89;
+  --accent: #d4af37;
+  --accent-light: #f4d35e;
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
+  --success: #10b981;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --primary: #0a2342;
+  --primary-light: #1d4e89;
+  --accent: #d4af37;
+  --white: #0f172a;
+  --gray-50: #1e293b;
+  --gray-100: #334155;
+  --gray-200: #475569;
+  --gray-600: #cbd5e1;
+  --gray-800: #f1f5f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  transition: var(--transition);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
+  color: var(--accent-light);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--gray-600);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  color: var(--primary);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--gray-100);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Header */
+header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+[data-theme="dark"] .logo {
+  color: var(--accent);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: var(--gray-100);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: var(--transition);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  padding: 5rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--accent-light);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--accent-light);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--accent);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Method Introduction */
+.method-intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.intro-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--accent);
+}
+
+.intro-card h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.intro-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.logic-table {
+  width: 100%;
+  margin-top: 2rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.logic-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.logic-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.logic-table tr:last-child td {
+  border-bottom: none;
+}
+
+.logic-table tr:hover {
+  background: var(--gray-50);
+}
+
+/* 5W2H Grid */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.method-card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.method-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent), var(--accent-light));
+  transform: scaleY(0);
+  transition: var(--transition);
+}
+
+.method-card.active::before {
+  transform: scaleY(1);
+}
+
+.method-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.method-letter {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.method-title h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.method-subtitle {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.method-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.method-card.active .method-content {
+  max-height: 600px;
+  margin-top: 1rem;
+}
+
+.method-tip {
+  background: var(--gray-100);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  border-left: 3px solid var(--accent);
+}
+
+.method-example {
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 0.75rem;
+}
+
+.method-example strong {
+  color: var(--accent-light);
+}
+
+/* Roleplay Trainer */
+.trainer {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.chat-window {
+  background: var(--gray-50);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  min-height: 300px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--gray-200);
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  color: var(--gray-600);
+}
+
+.chat-bubble {
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.chat-bubble.user {
+  background: var(--primary);
+  color: var(--white);
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.other {
+  background: var(--gray-200);
+  color: var(--gray-800);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.tip {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--accent);
+  color: var(--gray-800);
+}
+
+.response-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.response-btn {
+  text-align: left;
+  padding: 1rem;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--gray-800);
+}
+
+.response-btn:hover {
+  border-color: var(--accent);
+  background: var(--gray-50);
+}
+
+.trainer-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* Checklist */
+.checklist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.checklist-phase {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--gray-100);
+}
+
+.phase-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.checklist-item:hover {
+  background: var(--gray-50);
+}
+
+.checklist-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.checklist-item label {
+  flex: 1;
+  cursor: pointer;
+  color: var(--gray-800);
+}
+
+.checklist-item input:checked + label {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Transition Section */
+.transition-cards {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.transition-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.transition-card::before {
+  content: '1';
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(212, 175, 55, 0.1);
+  pointer-events: none;
+}
+
+.transition-card:nth-child(2)::before { content: '2'; }
+.transition-card:nth-child(3)::before { content: '3'; }
+
+.transition-phrase {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+[data-theme="dark"] .transition-phrase {
+  color: var(--accent-light);
+}
+
+.copy-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-verse {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--accent-light);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--accent-light);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.hidden { display: none !important; }
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--success);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(200px);
+  transition: transform 0.3s ease;
+  z-index: 2000;
+}
+
+.toast.show {
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section { padding: 2.5rem 0; }
+  .container { padding: 0 1rem; }
+  .header-content { padding: 0.75rem 0; }
+  .logo { font-size: 1rem; }
+  .methodology-grid, .method-intro { grid-template-columns: 1fr; }
+  .checklist-container { grid-template-columns: 1fr; }
+  .hero { padding: 3rem 0 2rem; }
+  .trainer { padding: 1.25rem; }
+  .chat-bubble { max-width: 95%; }
+  .footer-links { flex-direction: column; gap: 1rem; }
+  .logic-table { font-size: 0.875rem; }
+  .logic-table th, .logic-table td { padding: 0.75rem 0.5rem; }
+}
+
+/* === TUDO UM EMBAIXO DO OUTRO - COLUNA ÚNICA VERTICAL === */
+.method-intro,
+.methodology-grid,
+.checklist-container,
+.transition-cards {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  gap: 1.5rem !important;
+  overflow: visible !important;
+  width: 100% !important;
+}
+
+.method-intro .intro-card,
+.methodology-grid .method-card,
+.checklist-container .checklist-phase,
+.transition-cards .transition-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  flex: none !important;
+}
+
+/* Estudo de caso: um embaixo do outro */
+#estudo-caso .methodology-grid .method-card {
+  margin-bottom: 0 !important;
+}
+
+/* Abre o conteúdo automaticamente pra ver tudo */
+#estudo-caso .methodology-grid .method-card .method-content {
+  max-height: none !important;
+  overflow: visible !important;
+  display: block !important;
+  margin-top: 1rem !important;
+}
+
+</style>
+
+<style id="forca-vertical">
+  /* FORÇA PADRÃO UM EMBAIXO DO OUTRO - OFICIAL */
+  .transition-cards,
+  .method-grid,
+  .cards,
+  .grid,
+  .checklist-grid,
+  .pillars-grid,
+  .features-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    grid-template-columns: 1fr !important;
+  }
+  .transition-card,
+  .card,
+  .method-card,
+  .pillar-card,
+  .feature-card,
+  .checklist-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block !important;
+  }
+  /* Garante que seções fiquem em coluna */
+  .container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  /* Remove qualquer 2 colunas internas que criamos na aproximação */
+  div[style*="grid-template-columns:1fr"] {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+</style>
+
+
+<style id="fix-parte2-vertical">
+  #estudo-caso .methodology-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    grid-template-columns: 1fr !important;
+  }
+  #estudo-caso .methodology-grid .card,
+  #estudo-caso .methodology-grid .method-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    display: block !important;
+    float: none !important;
+  }
+  /* Garante que conteúdo fique aberto */
+  #estudo-caso .method-card.active .method-content {
+    display: block !important;
+    max-height: none !important;
+    opacity: 1 !important;
+  }
+</style>
+
+
+<style id="fix-budista-integrado">
+  #estudo-caso-budista .methodology-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    grid-template-columns: 1fr !important;
+  }
+  #estudo-caso-budista .card,
+  #estudo-caso-budista .method-card {
+    width: 100% !important;
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  #estudo-caso-budista .method-content {
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+    opacity: 1 !important;
+  }
+</style>
+
+
+<style id="nav-budista">
+  .header-content { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+  @media(max-width:768px){
+    .header-content nav { order:3; width:100%; justify-content:center; margin-left:0 !important; padding-top:0.5rem; border-top:1px solid #e5e7eb; }
+    .header-content nav a { font-size:0.85rem !important; }
+  }
+</style>
+
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-content">
+      <a href="https://www.radiomateus633.com" class="logo" target="_blank">
+        <div class="logo-icon">✝️</div>
+        <span>Rádio Mateus 6:33</span>
+      </a>
+      <nav style="display:flex; gap:1.2rem; align-items:center; margin-left:2rem; flex-wrap:wrap;">
+        <a href="#metodo" style="color:var(--primary); text-decoration:none; font-weight:600; font-size:0.95rem;">Método</a>
+        <a href="#estudo-caso" style="color:var(--primary); text-decoration:none; font-weight:600; font-size:0.95rem;">Caso 1: Universo</a>
+        <a href="#estudo-caso-budista" style="color:var(--primary); text-decoration:none; font-weight:600; font-size:0.95rem;">Caso 2: Filosofias</a>
+        <a href="#trainer" style="color:var(--primary); text-decoration:none; font-weight:600; font-size:0.95rem;">Treinar</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="badge">Ferramenta Prática de Evangelismo</div>
+      <h1>5W2H Evangelístico</h1>
+      <p class="hero-subtitle">7 perguntas que quebram objeções e apontam pra Jesus</p>
+      <a href="#metodo" class="btn btn-accent">Entender o Método</a>
+    </div>
+  </div>
+</section>
+
+<section id="metodo">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Parte 1</span>
+      <h2>O Método 5W2H</h2>
+      <p>Uma ferramenta de perguntas estratégica que leva a conversa do externo pro interno, do vago pro pessoal, da filosofia pra Jesus</p>
+    </div>
+    
+    <div class="method-intro">
+      <div class="intro-card">
+        <h3><span class="intro-icon">🎯</span>O que é?</h3>
+        <p>O 5W2H é uma sequência de 7 perguntas lógicas: What (O Que), How (Como), Who (Quem), Why (Por Que), When (Quando), Where (Onde), How Much (Quanto Custa).</p>
+        <p>Adaptado pro evangelismo, ele te dá um mapa pra conduzir qualquer conversa de objeções genéricas até o Evangelho.</p>
+      </div>
+      
+      <div class="intro-card">
+        <h3><span class="intro-icon">💡</span>Por que funciona?</h3>
+        <p>Porque expõe a insuficiência de respostas impessoais e cria fome por um relacionamento real.</p>
+        <p>Você não debate ideias. Você faz a pessoa sentir a diferença entre um "quê" distante e um "Quem" presente.</p>
+      </div>
+      
+      <div class="intro-card">
+        <h3><span class="intro-icon">🪜</span>Analogia da Mesa</h3>
+        <p>A fé bíblica é como uma mesa com 4 pernas: Vontade, Intelecto, Relacionamento e Emoção (VIRE).</p>
+        <p>Se só uma perna estiver apoiada, a mesa cai. O 5W2H fortalece todas as 4 pra que a pessoa se apoie em Cristo com segurança.</p>
+      </div>
+    </div>
+
+    <table class="logic-table">
+      <thead>
+        <tr>
+          <th>Pergunta</th>
+          <th>Dimensão Humana</th>
+          <th>Objetivo Evangelístico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>O QUÊ / COMO</strong></td>
+          <td>Cabeça (Intelecto)</td>
+          <td>Entender a crença e expor limitações lógicas</td>
+        </tr>
+        <tr>
+          <td><strong>QUEM</strong></td>
+          <td>Coração (Relacionamento)</td>
+          <td>Transição chave: do impessoal pro pessoal - Jesus</td>
+        </tr>
+        <tr>
+          <td><strong>POR QUÊ</strong></td>
+          <td>Coerência (Vontade)</td>
+          <td>Provar amor com sacrifício: a cruz vs. conceitos vazios</td>
+        </tr>
+        <tr>
+          <td><strong>QUANDO / ONDE</strong></td>
+          <td>Realidade (Urgência)</td>
+          <td>Trazer pro prático: crises não marcam hora</td>
+        </tr>
+        <tr>
+          <td><strong>QUANTO CUSTA</strong></td>
+          <td>Graça (Coração)</td>
+          <td>Quebrar mérito: salvação é presente, não conquista</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card mt-3" style="background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(212,175,55,0.05)); border: 2px solid var(--accent);">
+      <h3 class="text-center">✅ O Método Serve Para Qualquer Objeção</h3>
+      <p class="text-center">Funciona com "o universo", "karma", "energias", "ciência explica tudo", "sou uma boa pessoa", "todas religiões levam a Deus" e mais.</p>
+      <p class="text-center"><strong>Abaixo vamos usar "O universo cuida de mim" como estudo de caso para você aprender na prática.</strong></p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- BOX CIENTÍFICO NO PADRÃO DO SITE - UM EMBAIXO DO OUTRO -->
+    <section class="scientific-section" style="margin: 3rem 0;">
+      <div class="section-header" style="text-align:left; margin-bottom:1.5rem;">
+        <h2 style="color:var(--primary); font-size:1.8rem; display:flex; align-items:center; gap:0.6rem;"><span style="color:var(--accent);">🔬</span> O 5W2H é uma técnica científica?</h2>
+        <p style="color:#6b7280; margin-top:0.4rem;"><strong style="color:var(--accent);">Resposta curta:</strong> Pode ser usado como ferramenta lógica e organizacional, mas não como técnica científica no sentido estrito. E é exatamente por isso que funciona tão bem no evangelismo.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+
+        <!-- Card 1 -->
+        <div class="card method-card active" style="border-left:5px solid var(--accent); width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter">A</div><h3 class="method-title">O que o 5W2H realmente é</h3></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <p style="margin-bottom:0.8rem;">Nasceu na <strong>gestão da qualidade</strong>, não na ciência. Vem do poema de Rudyard Kipling (1902) <em>"Six Honest Serving Men"</em> e foi popularizado pela Toyota e pelo sistema PDCA nos anos 50 como checklist para não esquecer nada num plano de ação.</p>
+            <div style="background:#f9fafb; padding:0.8rem 1rem; border-radius:8px; border:1px solid #e5e7eb; font-family:monospace; text-align:center; letter-spacing:0.5px;"><strong>What, Why, Where, When, Who, How, How Much</strong></div>
+            <p style="margin-top:0.8rem; font-size:0.95rem; color:#6b7280;">Não é uma teoria testada e falseável. É um heurístico, um organizador de perguntas. Na academia é classificado como <strong>ferramenta de gestão</strong>, não como método científico.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card method-card active" style="border-left:5px solid var(--accent); width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter">B</div><h3 class="method-title">Por que não é considerado científico no sentido clássico</h3></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="display:flex; flex-direction:column; gap:0.8rem;">
+              <div style="display:flex; gap:0.8rem; align-items:flex-start; background:#fef3c7; padding:0.8rem; border-radius:8px;"><span style="background:var(--primary); color:white; min-width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700;">1</span><div><strong>Hipótese falseável</strong> - pode ser provada errada por dados. O 5W2H não propõe hipótese.</div></div>
+              <div style="display:flex; gap:0.8rem; align-items:flex-start; background:#fef3c7; padding:0.8rem; border-radius:8px;"><span style="background:var(--primary); color:white; min-width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700;">2</span><div><strong>Reprodutibilidade</strong> - outros chegam ao mesmo resultado com o mesmo protocolo. O 5W2H depende de quem pergunta.</div></div>
+              <div style="display:flex; gap:0.8rem; align-items:flex-start; background:#fef3c7; padding:0.8rem; border-radius:8px;"><span style="background:var(--primary); color:white; min-width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700;">3</span><div><strong>Validação empírica</strong> - testado contra grupo controle. O 5W2H não mede, só organiza.</div></div>
+            </div>
+            <p style="margin-top:0.8rem; font-size:0.9rem; color:#9ca3af; text-align:center; font-style:italic;">Ele não prevê nem mede nada. Ele só pergunta.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card method-card active" style="border-left:5px solid var(--accent); width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter">C</div><h3 class="method-title">Por que parece científico e funciona tão bem</h3></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <p>O ponto forte dele é forçar o cérebro a sair do vago para o concreto. Isso tem base em lógica e psicologia cognitiva:</p>
+            <div style="display:flex; flex-direction:column; gap:0.6rem; margin:1rem 0;">
+              <div style="border:1px solid #e5e7eb; border-radius:8px; padding:0.7rem 1rem; display:flex; justify-content:space-between; align-items:center;"><strong>What / How</strong><span style="color:#6b7280; font-size:0.9rem;">ativam o intelecto</span></div>
+              <div style="border:1px solid #e5e7eb; border-radius:8px; padding:0.7rem 1rem; display:flex; justify-content:space-between; align-items:center;"><strong>Who</strong><span style="color:#6b7280; font-size:0.9rem;">puxa para relacionamento</span></div>
+              <div style="border:1px solid #e5e7eb; border-radius:8px; padding:0.7rem 1rem; display:flex; justify-content:space-between; align-items:center;"><strong>Why</strong><span style="color:#6b7280; font-size:0.9rem;">exige coerência entre crença e comportamento</span></div>
+              <div style="border:1px solid #e5e7eb; border-radius:8px; padding:0.7rem 1rem; display:flex; justify-content:space-between; align-items:center;"><strong>When / Where / How Much</strong><span style="color:#6b7280; font-size:0.9rem;">tiram a ideia do abstrato e jogam na realidade</span></div>
+            </div>
+            <div style="background:var(--primary); color:white; padding:1rem; border-radius:8px; font-size:0.95rem; line-height:1.5;">Você não está usando o 5W2H para provar Deus em laboratório. Está usando para <strong style="color:#f4d35e;">expor insuficiência lógica</strong> de respostas impessoais como "o universo cuida de mim". Para isso, é excelente e totalmente legítimo.</div>
+          </div>
+        </div>
+
+        <!-- Card 4 - Como falar -->
+        <div class="card method-card active" style="border-left:5px solid #10b981; background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter" style="background:#10b981;">✓</div><h3 class="method-title">Como falar dele sem dar brecha para crítica</h3></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="border:2px dashed #d4af37; background:white; padding:1.2rem; border-radius:10px; text-align:center;">
+              <p style="margin:0; font-style:italic; font-size:1.05rem; line-height:1.6; color:var(--primary);">"Ferramenta de raciocínio lógico baseada no método de análise 5W2H, amplamente usada em gestão da qualidade para organizar ideias e testar coerência."</p>
+            </div>
+            <p style="margin-top:0.8rem; font-size:0.9rem; color:#6b7280; text-align:center;">Você mantém a autoridade, sem prometer o que ele não é. Complemente com perguntas socráticas e análise de cosmovisão, que é o que você já faz na prática.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PARTE 0 - APROXIMAÇÃO -->
+    <section id="aproximacao" style="margin:3rem 0;">
+      <div class="section-header" style="text-align:left; margin-bottom:1.5rem; border-top:3px solid #e5e7eb; padding-top:2.5rem;">
+        <span style="background:var(--primary); color:white; padding:0.3rem 0.8rem; border-radius:20px; font-size:0.8rem; font-weight:800; letter-spacing:0.5px;">PARTE 0</span>
+        <h2 style="color:var(--primary); font-size:1.9rem; margin:0.8rem 0 0.4rem 0; display:flex; align-items:center; gap:0.6rem;">🤝 Aproximação: Ganhando Permissão para o Diálogo</h2>
+        <p style="color:#6b7280; font-size:1.02rem; line-height:1.6; max-width:800px;">Sem aproximação, o diálogo vira interrogatório. A aproximação faz a pessoa <strong>te dar permissão</strong> para fazer as 7 perguntas. Você não debate ideia, você se interessa pela pessoa. Quem se sente ouvido, se abre.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+
+        <!-- Card 1 - Onde Quando -->
+        <div class="card method-card active" style="border-left:5px solid #3b82f6; width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter" style="background:#3b82f6;">1</div><div><h3 class="method-title" style="margin:0;">ONDE / QUANDO - Contexto, não confronto</h3><small style="color:#6b7280;">Ancora no ambiente, não na teologia</small></div></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="background:#eff6ff; border-radius:10px; padding:1.2rem; border-left:4px solid #3b82f6;">
+              <p style="margin:0 0 0.6rem 0; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; color:#1e40af; font-weight:700;">Você diz:</p>
+              <p style="margin:0; font-size:1.05rem; line-height:1.6; font-style:italic; color:#1e3a8a;">"Você sempre vem aqui? Percebi que você comentou sobre [universo / energia / lei da atração]... achei interessante."</p>
+            </div>
+            <div style="margin-top:1rem; display:flex; flex-direction:column; grid-template-columns:1fr; gap:0.8rem;">
+              <div style="background:#f9fafb; padding:0.8rem; border-radius:8px; border:1px solid #e5e7eb;"><strong style="color:#0a2342; font-size:0.9rem;">🎯 Objetivo:</strong><p style="margin:0.3rem 0 0 0; font-size:0.9rem; color:#6b7280;">Mostrar que você notou a pessoa, não só a frase. Quebra o gelo sem parecer vendedor de religião.</p></div>
+              <div style="background:#f9fafb; padding:0.8rem; border-radius:8px; border:1px solid #e5e7eb;"><strong style="color:#0a2342; font-size:0.9rem;">⚠️ Armadilha:</strong><p style="margin:0.3rem 0 0 0; font-size:0.9rem; color:#6b7280;">Não comece com "Deus" ou "Bíblia". Comece com o contexto dela. Onde e Quando.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 - Quem -->
+        <div class="card method-card active" style="border-left:5px solid #8b5cf6; width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter" style="background:#8b5cf6;">2</div><div><h3 class="method-title" style="margin:0;">QUEM - Pessoa antes da ideia</h3><small style="color:#6b7280;">Valida a história, não debate a crença</small></div></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="background:#f5f3ff; border-radius:10px; padding:1.2rem; border-left:4px solid #8b5cf6;">
+              <p style="margin:0 0 0.6rem 0; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; color:#6d28d9; font-weight:700;">Você pergunta:</p>
+              <p style="margin:0; font-size:1.05rem; line-height:1.6; font-style:italic; color:#4c1d95;">"Posso te perguntar quem te apresentou essa visão? Foi alguém importante pra você ou algo que você foi descobrindo sozinho(a)?"</p>
+            </div>
+            <p style="margin:1rem 0 0 0; font-size:0.95rem; color:#4b5563; line-height:1.6;"><strong>Por que funciona:</strong> Toda crença tem um rosto. Quando você pergunta QUEM, você honra a jornada dela. Quem se sente honrado baixa a guarda. Você não está atacando a ideia, está conhecendo a pessoa por trás dela.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 - O que Como + Permissão -->
+        <div class="card method-card active" style="border-left:5px solid var(--accent); width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter">3</div><div><h3 class="method-title" style="margin:0;">O QUÊ / COMO - Curiosidade + Pedido de Permissão</h3><small style="color:#6b7280;">Transforma interrogatório em diálogo</small></div></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="background:#ffffff; border:2px solid #0a2342; border-radius:10px; padding:1.4rem; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+              <p style="margin:0 0 0.6rem 0; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; color:#0a2342; font-weight:800;">Você diz:</p>
+              <p style="margin:0; font-size:1.15rem; line-height:1.7; font-style:italic; color:#111827; font-weight:500;">"Achei interessante o que você disse sobre 'o universo cuida'. Como isso funciona na prática pra você quando algo dá errado? Posso te fazer umas perguntas pra entender melhor? Sou curioso mesmo, não tô querendo debater."</p>
+            </div>
+            <div style="margin-top:1rem; background:#fef3c7; padding:1rem; border-radius:8px; border:1px solid #fde68a;">
+              <p style="margin:0; font-size:0.9rem; color:#92400e; line-height:1.6;"><strong style="color:#78350f;">Chave de ouro:</strong> A frase <em>"Posso te fazer umas perguntas pra entender melhor?"</em> é o pedido de permissão. Se ela disser SIM, ela te deu autorização para usar as 7 perguntas do Estudo de Caso. Sem isso, qualquer pergunta soa como ataque.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 - Por que Quanto Custa -->
+        <div class="card method-card active" style="border-left:5px solid #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%); width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter" style="background:#10b981;">4</div><div><h3 class="method-title" style="margin:0;">POR QUÊ / QUANTO CUSTA - Baixo risco, alta segurança</h3><small style="color:#059669; font-weight:600;">Tira o custo da conversa</small></div></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="background:white; border:2px dashed #10b981; border-radius:10px; padding:1.2rem;">
+              <p style="margin:0 0 0.6rem 0; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; color:#059669; font-weight:700;">Você garante:</p>
+              <p style="margin:0; font-size:1.05rem; line-height:1.6; font-style:italic; color:#065f46;">"Prometo que não vou tentar te converter em 5 minutos, só quero entender de verdade. Se em algum momento ficar desconfortável, me avisa e a gente para. Fechado? Sem pressão."</p>
+            </div>
+            <div style="margin-top:1rem; display:flex; gap:0.6rem; flex-wrap:wrap;">
+              <span style="background:#dcfce7; color:#166534; padding:0.4rem 0.8rem; border-radius:20px; font-size:0.85rem; font-weight:600;">✅ Remove defesa</span>
+              <span style="background:#dcfce7; color:#166534; padding:0.4rem 0.8rem; border-radius:20px; font-size:0.85rem; font-weight:600;">✅ Cria segurança</span>
+              <span style="background:#dcfce7; color:#166534; padding:0.4rem 0.8rem; border-radius:20px; font-size:0.85rem; font-weight:600;">✅ Dá controle pra ela</span>
+              <span style="background:#dcfce7; color:#166534; padding:0.4rem 0.8rem; border-radius:20px; font-size:0.85rem; font-weight:600;">✅ Abre porta pro diálogo</span>
+            </div>
+            <p style="margin:1rem 0 0 0; font-size:0.9rem; color:#6b7280; text-align:center; font-style:italic;">Se ela disser "fechado", você acabou de ganhar permissão para as 7 perguntas do Estudo de Caso. A aproximação terminou. O diálogo começa.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<section id="estudo-caso" style="background: var(--gray-100);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Parte 2</span>
+      <h2>Estudo de Caso: "O Universo Cuida de Mim"</h2>
+      <p>Veja como aplicar as 7 perguntas 5W2H na objeção mais comum da nova espiritualidade</p>
+    </div>
+    
+    <div class="methodology-grid">
+      <div class="card method-card active" data-step="0">
+        <div class="method-header">
+          <div class="method-letter">1</div>
+          <div class="method-title">
+            <h3>O QUÊ</h3>
+            <div class="method-subtitle">What - Criar abertura</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Fazer a pessoa explicar a crença dela e te dar material para as próximas perguntas.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "O que exatamente você quer dizer quando fala que 'o universo cuida de mim'?"
+          </div>
+          <p class="mt-2"><strong>Dica:</strong> Escute sem julgar. Deixe ela falar. Isso mostra respeito e cria conexão.</p>
+          <p><strong>Armadilha:</strong> Não debata aqui. Apenas entenda.</p>
+        </div>
+      </div>
+
+      <div class="card method-card active" data-step="1">
+        <div class="method-header">
+          <div class="method-letter">2</div>
+          <div class="method-title">
+            <h3>COMO</h3>
+            <div class="method-subtitle">How - Mostrar insuficiência</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Mostrar que o "como" do universo é impessoal e vago. Preparar o terreno para o "Quem".
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Como exatamente o universo te ajuda quando você está no fundo do poço às 3 da manhã?"
+          </div>
+          <p class="mt-2"><strong>Dica:</strong> Use exemplos práticos: dor, doença, luto, ansiedade. O universo não abraça.</p>
+          <p><strong>Armadilha:</strong> A pessoa pode responder "energias". Pergunte: "Como uma energia te consola?"</p>
+        </div>
+      </div>
+
+      <div class="card method-card active" data-step="2">
+        <div class="method-header">
+          <div class="method-letter">3</div>
+          <div class="method-title">
+            <h3>QUEM</h3>
+            <div class="method-subtitle">Who - Transição chave</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Este é o ponto de virada. Trocar o "quê" impessoal pelo "Quem" pessoal: Jesus.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Mas e se não for um 'quê' que cuida... e sim um 'Quem'? E se o nome dEle for Jesus?"
+          </div>
+          <p class="mt-2"><strong>Dica:</strong> Use tom gentil. Não é ataque, é oferta. "Eu descobri que Alguém cuida de mim..."</p>
+          <p><strong>Armadilha:</strong> Se ela resistir, volte para o "Como". Não force o nome de Jesus.</p>
+        </div>
+      </div>
+
+      <div class="card method-card active" data-step="3">
+        <div class="method-header">
+          <div class="method-letter">4</div>
+          <div class="method-title">
+            <h3>POR QUÊ</h3>
+            <div class="method-subtitle">Why - Evidência do sacrifício</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Mostrar que amor se prova com sacrifício. O universo nunca morreu por ninguém.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Por que você acredita que esse universo te ama de verdade? O que ele já fez por você?"
+          </div>
+          <p class="mt-2"><strong>Contraste:</strong> "Jesus provou o amor dEle morrendo na cruz por mim e por você."</p>
+          <p><strong>Dica:</strong> Romanos 5:8 é seu versículo aqui: "Mas Deus prova o seu amor para conosco..."</p>
+        </div>
+      </div>
+
+      <div class="card method-card active" data-step="4">
+        <div class="method-header">
+          <div class="method-letter">5</div>
+          <div class="method-title">
+            <h3>QUANDO</h3>
+            <div class="method-subtitle">When - Urgência da decisão</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Trazer a pessoa do teórico para o prático. Criar urgência amorosa.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Quando você vai precisar de mais do que boas energias? E se for hoje?"
+          </div>
+          <p class="mt-2"><strong>Dica:</strong> Morte, doença e crise não marcam hora. 2 Coríntios 6:2 - "Eis agora o tempo aceitável..."</p>
+          <p><strong>Armadilha:</strong> Não seja acusador. Seja pastor: "Eu não quero que você passe por isso sozinho."</p>
+        </div>
+      </div>
+
+      <div class="card method-card active" data-step="5">
+        <div class="method-header">
+          <div class="method-letter">6</div>
+          <div class="method-title">
+            <h3>ONDE</h3>
+            <div class="method-subtitle">Where - Presença relacional</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Mostrar que Deus não é distante. Ele está perto e quer relacionamento.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Onde você encontra o universo quando seu mundo desmorona? Jesus disse: 'Eis que estou convosco todos os dias.'"
+          </div>
+          <p class="mt-2"><strong>Dica:</strong> Salmo 139 + Mateus 28:20. Deus é onipresente e pessoal. O universo é só um conceito.</p>
+        </div>
+      </div>
+
+      <div class="card method-card active" data-step="6">
+        <div class="method-header">
+          <div class="method-letter">7</div>
+          <div class="method-title">
+            <h3>QUANTO CUSTA</h3>
+            <div class="method-subtitle">How Much - Convite da graça</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Quebrar a religiosidade do mérito. A salvação é de graça, mas custou tudo para Jesus.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Quanto custa para o universo te perdoar? Com Jesus, a salvação é um presente. Você só precisa receber."
+          </div>
+          <p class="mt-2"><strong>Dica:</strong> Efésios 2:8-9. Não é por obras. É pela graça. Isso alivia o coração.</p>
+          <p><strong>Chamado:</strong> "Quer receber esse presente hoje em oração comigo?"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="estudo-caso-budista" style="padding:2.5rem 0; background:#f9fafb;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag badge-budista">Nova Era • Budismo • Mindfulness</span>
+      <h2>O Budista que busca se esvaziar</h2>
+      <p>Perfil: Ricardo, 38 anos, medita há 5 anos. Frase: "A vida é sofrimento. Preciso me desapegar para quebrar o ciclo do carma."</p>
+    </div>
+
+    <!-- CARD PERFIL - 100% LEGIVEL FUNDO CLARO -->
+    <div class="card" style="max-width:800px; margin:0 auto 2rem auto; padding:1.5rem; background:#ffffff; border:2px solid #0a2342;">
+      <div style="display:flex; gap:1rem; align-items:start;">
+        <div style="font-size:2rem;">🧘‍♂️</div>
+        <div>
+          <h3 style="margin:0 0 0.5rem 0; color:#0a2342;">O que ele acredita:</h3>
+          <p style="margin:0; color:#111827; font-size:1.05rem; line-height:1.7;">
+            <strong>Dukkha</strong> (vida é sofrimento), <strong>Anatta</strong> (não-eu), <strong>Carma</strong> (causa e efeito), <strong>Nirvana</strong> alcançado por esforço próprio através de meditação, conduta ética e esvaziamento. Jesus é visto como um mestre iluminado, igual a Buda.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRASE DE APROXIMAÇÃO - CORRIGIDA FUNDO BRANCO -->
+    <div style="max-width:800px; margin:0 auto 2.5rem auto;">
+      <div style="background:#ffffff; border:2px solid #0a2342; border-radius:10px; padding:1.4rem; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <p style="margin:0 0 0.6rem 0; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; color:#0a2342; font-weight:800;">Você diz (Parte 0 - Aproximação):</p>
+        <p style="margin:0; font-size:1.15rem; line-height:1.7; font-style:italic; color:#111827; font-weight:500;">"Achei profundo o que você disse sobre o sofrimento e o desapego. Como isso tem funcionado na prática pra você quando a ansiedade bate forte às 3 da manhã? Posso te fazer umas perguntas pra entender melhor? Sou curioso mesmo, não tô querendo debater."</p>
+      </div>
+    </div>
+
+    <div class="methodology-grid">
+
+      <!-- ITEM 1 -->
+      <div class="card method-card active" data-step="0">
+        <div class="method-header">
+          <div class="method-letter">1</div>
+          <div class="method-title">
+            <h3>O QUÊ</h3>
+            <div class="method-subtitle">What - Definição</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Fazer ele definir o que entende por purificação, carma e nirvana.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "O que você quer dizer exatamente com 'purificação'? O que seria esse nirvana no seu dia a dia?"
+          </div>
+          <p><strong>Dica:</strong> Deixe ele falar. Não corrija. Anote palavras: "esvaziar", "desapego", "ciclo".</p>
+          <p style="margin:0; background:#f0fdf4; padding:0.8rem; border-radius:6px; border:1px solid #bbf7d0;"><strong>Resposta típica:</strong> "É limpar a mente dos três venenos: ganância, raiva e ignorância. Observar o pensamento sem se apegar."</p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="card method-card active" data-step="1">
+        <div class="method-header">
+          <div class="method-letter">2</div>
+          <div class="method-title">
+            <h3>COMO</h3>
+            <div class="method-subtitle">How - Insuficiência da técnica</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Expor que a técnica não abraça. Ela ensina a conviver com a dor, não a curá-la.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Como isso funciona quando o sofrimento é causado por outra pessoa, algo que você não controla, como uma traição ou luto?"
+          </div>
+          <p><strong>Dica:</strong> Tom de empatia, não de ataque. Você está investigando, não debatendo.</p>
+          <p style="margin:0; background:#fef2f2; padding:0.8rem; border-radius:6px; border:1px solid #fecaca;"><strong>Brecha que ele abre:</strong> "Funciona na maioria das vezes... mas tem noite que a técnica não me abraça de volta. Ela só me ensina a ficar em paz com o fato de que não está bem."</p>
+        </div>
+      </div>
+
+      <!-- ITEM 3 - CORRIGIDO -->
+      <div class="card method-card active" data-step="2">
+        <div class="method-header">
+          <div class="method-letter">3</div>
+          <div class="method-title">
+            <h3>QUEM</h3>
+            <div class="method-subtitle">Who - Transição chave - O Perfeito</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Este é o ponto de virada. Trocar o "quê" impessoal (técnica, esvaziamento) pelo "Quem" pessoal e perfeito: Jesus.
+          </div>
+          <div class="method-example" style="border-left-color:#7c3aed; background:#faf5ff;">
+            <strong>Sua Fala:</strong> "Se todos são falhos, você se inclui, né? E se existir Alguém perfeito que não falhou e se ofereceu para pagar pelos nossos erros? Basta reconhecer que não conseguimos sozinhos e nos entregar a Ele. Esse Alguém é Jesus. Você gostaria de conhecer melhor essa verdade?"
+          </div>
+          <p><strong>Contraste teológico:</strong> Buda disse "Seja sua própria lâmpada". Jesus disse "Eu sou a luz do mundo" (João 8:12). Buda apontou o caminho. Jesus disse "Eu SOU o caminho" (João 14:6).</p>
+        </div>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="card method-card active" data-step="3">
+        <div class="method-header">
+          <div class="method-letter">4</div>
+          <div class="method-title">
+            <h3>POR QUÊ</h3>
+            <div class="method-subtitle">Why - Motivação do sacrifício</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Responder "por que Ele faria isso por mim?" com amor, não com mérito.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta / Resposta:</strong> "Por que Ele faria isso? Romanos 5:8 - 'Deus demonstra seu amor por nós: Cristo morreu em nosso favor quando ainda éramos pecadores.' Não porque você meditou o suficiente, mas porque Ele te amou quando você ainda estava se afogando."
+          </div>
+          <p><strong>Analogia do Afogamento:</strong> "Imagine que você está se afogando. Um mestre na margem grita 'nade melhor, esvazie a mente, observe a água'. Outro pula na água e te resgata. Qual você escolheria? Buda gritou da margem. Jesus pulou na água."</p>
+        </div>
+      </div>
+
+      <!-- ITEM 5 -->
+      <div class="card method-card active" data-step="4">
+        <div class="method-header">
+          <div class="method-letter">5</div>
+          <div class="method-title">
+            <h3>QUANDO</h3>
+            <div class="method-subtitle">When - Garantia hoje</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Quebrar a ideia de salvação em muitas vidas futuras. Oferecer certeza hoje.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Quando você saberá que já meditou o suficiente, que já se purificou o suficiente para quebrar o carma? E se a paz pudesse ser hoje, como presente, não como conquista?"
+          </div>
+          <p><strong>Versículo:</strong> 2 Coríntios 6:2 "Eis agora o tempo favorável, eis agora o dia da salvação." No budismo, paz é futura e incerta. No evangelho, é hoje e garantida.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 6 - CORRIGIDO -->
+      <div class="card method-card active" data-step="5">
+        <div class="method-header">
+          <div class="method-letter">6</div>
+          <div class="method-title">
+            <h3>ONDE</h3>
+            <div class="method-subtitle">Where - Presença, não vazio</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip">
+            <strong>Objetivo:</strong> Contrastar o "vazio" (Sunyata) budista com a "presença" cristã.
+          </div>
+          <div class="method-example">
+            <strong>Pergunta:</strong> "Onde você encontra presença quando se sente sozinho? O budismo oferece o vazio. Jesus oferece a presença. Ele disse: 'Eis que estou convosco todos os dias' (Mateus 28:20)."
+          </div>
+          <p><strong>Dica:</strong> Budista busca esvaziar-se para não sofrer. Cristão é preenchido pelo Espírito Santo para ter paz no sofrimento.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 7 -->
+      <div class="card method-card active" data-step="6">
+        <div class="method-header">
+          <div class="method-letter">7</div>
+          <div class="method-title">
+            <h3>QUANTO CUSTA</h3>
+            <div class="method-subtitle">How much - Graça vs Esforço</div>
+          </div>
+        </div>
+        <div class="method-content">
+          <div class="method-tip" style="border-left-color:#10b981; background:#f0fdf4;">
+            <strong>Objetivo:</strong> Apresentar a graça como presente caríssimo e gratuito.
+          </div>
+          <div class="method-example" style="background:#ffffff; border:2px solid #0a2342; border-radius:10px; padding:1.2rem;">
+            <p style="margin:0; font-size:1.1rem; line-height:1.7; color:#111827; font-weight:500;">"O preço já foi pago e não foi barato, custou a vida do Filho único de Deus. Mas a oferta é graciosa, um verdadeiro presente de altíssimo valor. E para nós, o que custa? Estender a mão e aceitar o presente. Iniciar um relacionamento com este nosso Amigo Salvador."</p>
+          </div>
+          <p class="mt-2"><strong>Fechamento:</strong> Budismo = Faça. Cristianismo = Feito. Tetelestai (João 19:30) - Está consumado.</p>
+          <p style="margin:1rem 0 0 0;"><strong>Convite:</strong> "Você quer estender a mão agora e receber esse presente? Posso orar com você?"</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ORAÇÃO MODELO -->
+    <div class="card" style="max-width:800px; margin:2.5rem auto 0 auto; padding:1.5rem; background:#ffffff; border-top:4px solid #7c3aed;">
+      <h3 style="color:#0a2342; margin-bottom:1rem;">🙏 Oração Modelo para o Budista</h3>
+      <p style="color:#111827; font-size:1.05rem; line-height:1.8; font-style:italic; margin:0;">
+        "Jesus, eu passei a vida tentando me salvar sozinho, tentando me esvaziar e me purificar pelo meu esforço, e confesso que estou cansado e ainda me sinto vazio. Hoje eu entendo que o Senhor não ficou gritando instruções da margem, mas pulou na água para me resgatar. Eu reconheço que sou falho e não consigo sozinho. Eu creio que o Senhor morreu e ressuscitou por mim, pagando o preço que eu não podia pagar. Eu estendo minha mão agora e aceito o Seu presente de salvação e presença. Entra na minha vida, me preenche e me dá a paz que eu tanto procurei meditando. Amém."
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="trainer">
+  <div class="container">
+    <div class="section-header">
+      <h2>Roleplay Trainer</h2>
+      <p>Pratique a transição do "Como" para o "Quem" - o momento mais importante da conversa</p>
+    </div>
+    
+    <div class="trainer">
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-message">
+          <div class="chat-label">Situação</div>
+          <div class="chat-bubble tip">
+            Você está conversando com a Ana. Ela acabou de dizer: "Eu sinto que o universo sempre me protege. Quando eu mentalizo coisas boas, elas acontecem."
+          </div>
+        <div class="chat-message">
+          <div class="chat-label">Você - Passo COMO</div>
+          <div class="chat-bubble user">
+            "Que bom, Ana! Como exatamente o universo te protege quando você está ansiosa às 3 da manhã e não consegue dormir?"
+          </div>
+        </div>
+        <div class="chat-message">
+          <div class="chat-label">Ana</div>
+          <div class="chat-bubble other">
+            "Ah... eu respiro fundo, penso em energias positivas... às vezes funciona."
+          </div>
+        </div>
+      </div>
+      
+      <div class="response-options" id="responseOptions">
+        <button class="response-btn" data-response="0">
+          <strong>Opção A:</strong> "Energias positivas não podem te abraçar. Mas e se eu te disser que existe um Quem que te ama e está com você às 3 da manhã? O nome dEle é Jesus."
+        </button>
+        <button class="response-btn" data-response="1">
+          <strong>Opção B:</strong> "Isso é bobagem. O universo não existe. Só Jesus salva!"
+        </button>
+        <button class="response-btn" data-response="2">
+          <strong>Opção C:</strong> "Interessante. E como você sabe que não é só coincidência?"
+        </button>
+      </div>
+      
+      <div class="trainer-controls">
+        <button class="btn btn-primary" id="resetTrainer">Reiniciar Treino</button>
+        <button class="btn btn-outline" id="nextScenario">Próximo Cenário</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checklist" style="background: var(--gray-100);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Checklist do Evangelista</h2>
+      <p>Use antes, durante e depois da conversa. Salvo automaticamente no seu navegador</p>
+    </div>
+    
+    <div class="checklist-container">
+      <div class="checklist-phase">
+        <div class="phase-header">
+          <div class="phase-icon">🙏</div>
+          <h3>Antes da Conversa</h3>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check1" data-id="check1">
+          <label for="check1">Orei por sabedoria e pela pessoa</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check2" data-id="check2">
+          <label for="check2">Revisei a ordem 5W2H mentalmente</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check3" data-id="check3">
+          <label for="check3">Lembrei que meu papel é plantar, Deus faz crescer</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check4" data-id="check4">
+          <label for="check4">Decidi ouvir mais do que falar</label>
+        </div>
+      </div>
+
+      <div class="checklist-phase">
+        <div class="phase-header">
+          <div class="phase-icon">💬</div>
+          <h3>Durante a Conversa</h3>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check5" data-id="check5">
+          <label for="check5">Fiz a pergunta "O QUÊ" para entender</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check6" data-id="check6">
+          <label for="check6">Usei o "COMO" para mostrar insuficiência sem atacar</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check7" data-id="check7">
+          <label for="check7">Fiz a transição gentil para o "QUEM" - Jesus</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check8" data-id="check8">
+          <label for="check8">Mostrei o "POR QUÊ" - sacrifício da cruz</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check9" data-id="check9">
+          <label for="check9">Evitei armadilhas: debate, deboche, pressa</label>
+        </div>
+      </div>
+
+      <div class="checklist-phase">
+        <div class="phase-header">
+          <div class="phase-icon">✨</div>
+          <h3>Depois da Conversa</h3>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check10" data-id="check10">
+          <label for="check10">Orei agradecendo, independente do resultado</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check11" data-id="check11">
+          <label for="check11">Se houve interesse, convidei para igreja/célula</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check12" data-id="check12">
+          <label for="check12">Peguei contato para continuar em amizade</label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="check13" data-id="check13">
+          <label for="check13">Anotei para interceder pela pessoa na semana</label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <button class="btn btn-outline" id="clearChecklist">Limpar Checklist</button>
+    </div>
+  </div>
+</section>
+
+<section id="transicao">
+  <div class="container">
+    <div class="section-header">
+      <h2>Transição para Jesus</h2>
+      <p>Modelo de 3 frases para apresentar Cristo com clareza e amor. Copie e use no WhatsApp ou na Rádio</p>
+    </div>
+    
+    <div class="transition-cards">
+      <div class="transition-card">
+        <h3>FRASE 1: O Diagnóstico Amoroso</h3>
+        <p class="transition-phrase" id="frase1">"Eu entendo essa busca por cuidado e paz. Mas eu descobri que um 'quê' impessoal não pode te amar de verdade, nem enxugar suas lágrimas às 3 da manhã."</p>
+        <p>Reconhece a dor da pessoa e expõe a limitação do universo impessoal sem condenar.</p>
+        <div class="copy-group">
+          <button class="btn btn-primary" onclick="copyFrase('frase1')">Copiar Frase</button>
+          
+        </div>
+      </div>
+
+      <div class="transition-card">
+        <h3>FRASE 2: A Apresentação do QUEM</h3>
+        <p class="transition-phrase" id="frase2">"O que eu encontrei não foi uma energia, foi uma Pessoa. O nome dEle é Jesus. Ele não é distante - Ele morreu na cruz para provar o quanto te ama e hoje vive para te ouvir."</p>
+        <p>Apresenta Jesus como resposta relacional e sacrificial. Usa João 3:16 e Romanos 5:8 como base.</p>
+        <div class="copy-group">
+          <button class="btn btn-primary" onclick="copyFrase('frase2')">Copiar Frase</button>
+          
+        </div>
+      </div>
+
+      <div class="transition-card">
+        <h3>FRASE 3: O Convite da Graça</h3>
+        <p class="transition-phrase" id="frase3">"E o melhor: você não precisa merecer nem pagar por esse amor. É um presente. Jesus já pagou o preço. Quer receber esse presente hoje e começar um relacionamento com Quem realmente cuida de você?"</p>
+        <p>Quebra a religiosidade do mérito. Efésios 2:8-9. Convite direto mas respeitoso.</p>
+        <div class="copy-group">
+          <button class="btn btn-primary" onclick="copyFrase('frase3')">Copiar Frase</button>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <h3 class="text-center">Armadilhas para Evitar</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div>
+          <strong>❌ Debater Filosofia</strong>
+          <p>Não entre em discussão sobre física quântica. Volte para o pessoal: "Mas como isso te ajuda na dor?"</p>
+        </div>
+        <div>
+          <strong>❌ Ridicularizar a Crença</strong>
+          <p>Nunca chame de "bobagem". Honre a busca. "Eu entendo essa busca por paz..."</p>
+        </div>
+        <div>
+          <strong>❌ Presumir Salvação</strong>
+          <p>Criança em lar cristão não é salva. Pergunte: "Você já teve um encontro pessoal com Jesus?"</p>
+        </div>
+        <div>
+          <strong>❌ Pular o QUEM</strong>
+          <p>Falar de Deus genérico não salva. É preciso nomear: Jesus Cristo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <p class="footer-verse">"Buscai primeiro o Reino de Deus e a sua justiça, e todas estas coisas vos serão acrescentadas."<br>Mateus 6:33</p>
+      <div class="footer-links">
+        <a href="https://www.radiomateus633.com" target="_blank">Rádio Mateus 6:33</a>
+        <a href="#metodo">O Método</a>
+        <a href="#estudo-caso">Caso 1: Universo</a>
+        <a href="#estudo-caso-budista" style="color:#7c3aed; font-weight:700;">Caso 2: Filosofias</a>
+        <a href="#trainer">Treinar</a>
+        <a href="#checklist">Checklist</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Ferramenta prática para evangelismo pessoal e na rádio. Use com amor e dependência do Espírito Santo.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Frase copiada!</div>
+
+<script>
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
+themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+themeToggle.addEventListener('click', () => {
+  const theme = document.documentElement.getAttribute('data-theme');
+  const newTheme = theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+});
+
+// Expandable Cards
+document.querySelectorAll('.method-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const isActive = this.classList.contains('active');
+    document.querySelectorAll('.method-card').forEach(c => c.classList.remove('active'));
+    if (!isActive) this.classList.add('active');
+  });
+});
+
+// Checklist LocalStorage
+const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+checkboxes.forEach(checkbox => {
+  const id = checkbox.dataset.id;
+  const saved = localStorage.getItem(id);
+  if (saved === 'true') checkbox.checked = true;
+  
+  checkbox.addEventListener('change', function() {
+    localStorage.setItem(id, this.checked);
+  });
+});
+
+document.getElementById('clearChecklist').addEventListener('click', () => {
+  if (confirm('Tem certeza que deseja limpar todo o checklist?')) {
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = false;
+      localStorage.removeItem(checkbox.dataset.id);
+    });
+    showToast('Checklist limpo!');
+  }
+});
+
+// Toast
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// Copy Frase
+function copyFrase(id) {
+  const text = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('Frase copiada para área de transferência!');
+  });
+}
+
+// Share WhatsApp
+function shareWhatsApp(id) {
+  const text = document.getElementById(id).textContent;
+  const url = `https://wa.me/?text=${encodeURIComponent(text + '\n\n- Rádio Mateus 6:33')}`;
+  window.open(url, '_blank');
+}
+
+// Roleplay Trainer
+const scenarios = [
+  {
+    situation: "Você está conversando com a Ana. Ela acabou de dizer: 'Eu sinto que o universo sempre me protege. Quando eu mentalizo coisas boas, elas acontecem.'",
+    yourQuestion: "'Que bom, Ana! Como exatamente o universo te protege quando você está ansiosa às 3 da manhã e não consegue dormir?'",
+    theirResponse: "'Ah... eu respiro fundo, penso em energias positivas... às vezes funciona.'",
+    options: [
+      { text: "Opção A: 'Energias positivas não podem te abraçar. Mas e se eu te disser que existe um Quem que te ama e está com você às 3 da manhã? O nome dEle é Jesus.'", correct: true, feedback: "Excelente! Você aplicou o QUEM com gentileza. Agora espere a reação dela e esteja pronto para o POR QUÊ." },
+      { text: "Opção B: 'Isso é bobagem. O universo não existe. Só Jesus salva!'", correct: false, feedback: "Cuidado! Isso fecha a porta. Honre a busca dela primeiro. Lembre: amor antes da verdade rompe barreiras." },
+      { text: "Opção C: 'Interessante. E como você sabe que não é só coincidência?'", correct: false, feedback: "Boa pergunta, mas você voltou para o COMO. A Ana já demonstrou insuficiência. É hora de avançar para o QUEM." }
+    ]
+  },
+  {
+    situation: "João diz: 'Eu acredito na força do universo. Tudo tem energia, cara. É só vibrar na frequência certa.'",
+    yourQuestion: "'Entendo. Como essa energia te ajuda quando você perde alguém que ama?'",
+    theirResponse: "'Bem... eu tento aceitar que tudo é um ciclo. Mas dói muito, sabe?'",
+    options: [
+      { text: "Opção A: 'Eu sei que dói. Eu perdi meu pai. E foi Jesus quem me abraçou quando o universo ficou em silêncio. Quer saber como?'", correct: true, feedback: "Perfeito! Vulnerabilidade + QUEM. Você criou ponte com sua história e apresentou Jesus como consolo real." },
+      { text: "Opção B: 'Viu? O universo não cuida de ninguém. Você está enganado.'", correct: false, feedback: "Verdade sem amor vira ataque. João se abriu vulneravelmente. Acolher a dor primeiro abre o coração para Jesus." },
+      { text: "Opção C: 'Isso é doutrina hindu do karma. Você precisa estudar a Bíblia.'", correct: false, feedback: "Informação demais, conexão de menos. Primeiro conquiste o direito de ser ouvido. Depois doutrina." }
+    ]
+  }
+];
+
+let currentScenario = 0;
+
+function loadScenario() {
+  const scenario = scenarios[currentScenario];
+  const chatWindow = document.getElementById('chatWindow');
+  chatWindow.innerHTML = `
+    <div class="chat-message">
+      <div class="chat-label">Situação</div>
+      <div class="chat-bubble tip">${scenario.situation}</div>
+    </div>
+    <div class="chat-message">
+      <div class="chat-label">Você - Passo COMO</div>
+      <div class="chat-bubble user">${scenario.yourQuestion}</div>
+    </div>
+    <div class="chat-message">
+      <div class="chat-label">Resposta</div>
+      <div class="chat-bubble other">${scenario.theirResponse}</div>
+    </div>
+  `;
+  
+  const optionsDiv = document.getElementById('responseOptions');
+  optionsDiv.innerHTML = scenario.options.map((opt, i) => 
+    `<button class="response-btn" data-response="${i}"><strong>${opt.text.split(':')[0]}:</strong> ${opt.text.split(':').slice(1).join(':')}</button>`
+  ).join('');
+  
+  attachResponseListeners();
+}
+
+function attachResponseListeners() {
+  document.querySelectorAll('.response-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const responseIndex = parseInt(this.dataset.response);
+      const option = scenarios[currentScenario].options[responseIndex];
+      const chatWindow = document.getElementById('chatWindow');
+      
+      chatWindow.innerHTML += `
+        <div class="chat-message">
+          <div class="chat-label">Você escolheu</div>
+          <div class="chat-bubble user">${option.text}</div>
+        </div>
+        <div class="chat-message">
+          <div class="chat-label">Feedback do Treinador</div>
+          <div class="chat-bubble tip" style="border-color: ${option.correct ? 'var(--success)' : 'var(--accent)'}">
+            ${option.correct ? '✅' : '⚠️'} ${option.feedback}
+          </div>
+        </div>
+      `;
+      
+      document.getElementById('responseOptions').innerHTML = '<p style="text-align:center;color:var(--gray-600);">Clique em "Reiniciar" ou "Próximo Cenário" para continuar.</p>';
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    });
+  });
+}
+
+document.getElementById('resetTrainer').addEventListener('click', loadScenario);
+document.getElementById('nextScenario').addEventListener('click', () => {
+  currentScenario = (currentScenario + 1) % scenarios.length;
+  loadScenario();
+});
+
+loadScenario();
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+
+    <!-- PARTE 4 - APROVAÇÃO - 3 CAMADAS -->
+    <section id="aprovacao" style="margin:4rem 0;">
+      <div class="section-header" style="text-align:left; margin-bottom:1.5rem; border-top:3px solid #e5e7eb; padding-top:2.5rem;">
+        <span style="background:var(--accent); color:var(--primary); padding:0.3rem 0.8rem; border-radius:20px; font-size:0.8rem; font-weight:800; letter-spacing:0.5px;">PARTE 4</span>
+        <h2 style="color:var(--primary); font-size:1.9rem; margin:0.8rem 0 0.4rem 0; display:flex; align-items:center; gap:0.6rem;">✅ Aprovação: A Colheita do Diálogo</h2>
+        <p style="color:#6b7280; font-size:1.02rem; line-height:1.6; max-width:800px;">Aprovação não é forçar um sim. É fazer a pessoa <strong>aprovar para ela mesma</strong> que a cosmovisão cristã faz mais sentido que a dela. Se o diálogo foi bem feito, a aprovação é só a colheita. O erro comum é pular do diálogo direto para o convite. O que falta no meio é a <strong>pausa de aprovação</strong>.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+
+        <!-- Card A - Lógica -->
+        <div class="card method-card active" style="border-left:5px solid #0a2342; width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter" style="background:#0a2342;">1</div><div><h3 class="method-title" style="margin:0;">APROVAÇÃO LÓGICA - "Faz sentido?"</h3><small style="color:#6b7280;">Usa o Why e o What que ela já respondeu contra ela mesma</small></div></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="background:#f3f4f6; border-radius:10px; padding:1.2rem; border-left:4px solid var(--accent);">
+              <p style="margin:0 0 0.6rem 0; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; color:#9ca3af; font-weight:700;">Pergunta que você faz:</p>
+              <p style="margin:0; font-size:1.1rem; line-height:1.6; font-style:italic; color:var(--primary);">"Se o que conversamos faz sentido, que 'o universo não pode cuidar porque não é pessoal', qual visão de mundo explica melhor cuidado, propósito e moral: um universo impessoal ou um Deus pessoal?"</p>
+            </div>
+            <div style="margin-top:1rem; display:flex; gap:0.6rem; flex-wrap:wrap;">
+              <span style="background:#e0e7ff; color:#3730a3; padding:0.3rem 0.7rem; border-radius:20px; font-size:0.85rem;"><strong>Objetivo:</strong> Fazer ela verbalizar a contradição</span>
+              <span style="background:#fef3c7; color:#92400e; padding:0.3rem 0.7rem; border-radius:20px; font-size:0.85rem;"><strong>Não diga:</strong> "Viu, você está errada"</span>
+              <span style="background:#dcfce7; color:#166534; padding:0.3rem 0.7rem; border-radius:20px; font-size:0.85rem;"><strong>Diga:</strong> "O que faz mais sentido pra você?"</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card B - Emocional -->
+        <div class="card method-card active" style="border-left:5px solid #d4af37; width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter" style="background:#d4af37; color:#0a2342;">2</div><div><h3 class="method-title" style="margin:0;">APROVAÇÃO EMOCIONAL / VOLITIVA - "Você quer?"</h3><small style="color:#6b7280;">Puxa o Who, When, Where que ela te deu no Estudo de Caso</small></div></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="background:#ffffff; border:2px solid #d4af37; border-radius:10px; padding:1.2rem; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+              <p style="margin:0 0 0.6rem 0; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; color:#92400e; font-weight:800;">Pergunta que você faz:</p>
+              <p style="margin:0; font-size:1.15rem; line-height:1.7; font-style:italic; color:#0a2342; font-weight:500;">"Se for verdade que existe um Deus pessoal que te vê e te ama, não só uma energia, isso seria uma boa notícia pra você hoje? Onde isso mudaria seu 'Quando' e 'Onde' que você me contou?"</p>
+            </div>
+            <p style="margin:1rem 0 0 0; font-size:0.95rem; color:#4b5563; line-height:1.6;">Aqui você sai da cabeça e vai para o coração. Você não está vendendo religião, está oferecendo relacionamento. Use exatamente as dores que ela te contou no <strong>Quando</strong> (crise) e <strong>Onde</strong> (lugar de solidão).</p>
+          </div>
+        </div>
+
+        <!-- Card C - Prática -->
+        <div class="card method-card active" style="border-left:5px solid #ef4444; width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter" style="background:#ef4444;">3</div><div><h3 class="method-title" style="margin:0;">APROVAÇÃO PRÁTICA - "Quanto custa?"</h3><small style="color:#6b7280;">Inverte o 7º pilar. Fecha a conta.</small></div></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:1.2rem;">
+              <p style="margin:0 0 0.6rem 0; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; color:#92400e; font-weight:700;">Pergunta que você faz:</p>
+              <p style="margin:0; font-size:1.05rem; line-height:1.7; font-style:italic; color:#78350f;">"O que te custaria continuar vivendo como se o universo impessoal cuidasse, se no fundo você já percebe que não cuida? E o que te custaria testar por 7 dias conversar com Deus como pessoa, não como energia?"</p>
+            </div>
+            <div style="margin-top:1rem; background:#f9fafb; padding:1rem; border-radius:8px; border:1px solid #e5e7eb;">
+              <p style="margin:0; font-size:0.9rem; color:#6b7280;"><strong style="color:var(--primary);">Princípio:</strong> Não é oração forçada. É um experimento de baixo custo e alta honestidade. Você reduz a barreira de entrada. 7 dias é suportável para um cético.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card D - Convite -->
+        <div class="card method-card active" style="border-left:5px solid #10b981; background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%); width:100%; max-width:100%;">
+          <div class="method-header"><div class="method-letter" style="background:#10b981;">✓</div><div><h3 class="method-title" style="margin:0;">CONVITE DE 7 DIAS + ORAÇÃO MODELO</h3><small style="color:#059669; font-weight:600;">Só faça se as 3 aprovações anteriores foram "sim"</small></div></div>
+          <div class="method-content" style="max-height:none; display:block; opacity:1; margin-top:1rem;">
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+              <div style="background:white; border:2px dashed #10b981; border-radius:10px; padding:1.2rem;">
+                <p style="margin:0 0 0.5rem 0; font-weight:700; color:#065f46; font-size:0.9rem; text-transform:uppercase;">Roteiro do convite:</p>
+                <p style="margin:0; font-size:1rem; line-height:1.6; color:#064e3b; font-style:italic;">"Que tal a gente fazer assim: por 7 dias, ao invés de jogar pro universo, você fala com Deus como se Ele fosse pessoal e estivesse te ouvindo? Se nada mudar, você volta pra sua visão com mais certeza. Se algo mudar, a gente conversa de novo. Posso te mandar uma oração simples de 30 segundos pra começar? Sem compromisso de igreja, só você e Deus."</p>
+              </div>
+              <div style="background:#ffffff; border:2px solid #0a2342; border-radius:10px; padding:1.4rem; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+                <p style="margin:0 0 0.6rem 0; font-weight:800; color:#0a2342; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">Oração modelo (30 seg):</p>
+                <p style="margin:0; font-size:1.15rem; line-height:1.8; color:#111827; font-weight:500;">"Deus, se Você existe e é pessoal, e não uma energia impessoal, se mostra pra mim de um jeito que eu entenda. Eu não sei orar direito, mas estou disposto(a) a Te conhecer se Você for real. Em nome de Jesus, amém."</p>
+              </div>
+              <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+                <span style="background:#dcfce7; color:#166534; padding:0.4rem 0.8rem; border-radius:20px; font-size:0.85rem; font-weight:600;">✅ Baixo custo</span>
+                <span style="background:#dcfce7; color:#166534; padding:0.4rem 0.8rem; border-radius:20px; font-size:0.85rem; font-weight:600;">✅ Alta honestidade</span>
+                <span style="background:#dcfce7; color:#166534; padding:0.4rem 0.8rem; border-radius:20px; font-size:0.85rem; font-weight:600;">✅ Sem pressão religiosa</span>
+                <span style="background:#dcfce7; color:#166534; padding:0.4rem 0.8rem; border-radius:20px; font-size:0.85rem; font-weight:600;">✅ Deixa porta aberta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div style="margin-top:2rem; text-align:center; padding:1.5rem; background:#f9fafb; border-radius:12px; border:1px solid #e5e7eb;">
+        <p style="margin:0; font-size:0.95rem; color:#6b7280; line-height:1.6;"><strong style="color:var(--primary);">Lembre-se:</strong> O erro comum é pular do diálogo direto para o convite. A pausa de aprovação é o que transforma debate em discipulado.<br>Se ela disser "não sei" em alguma das 3 camadas, volte para o diálogo com gentileza. Aprovação não é evento, é processo.</p>
+      </div>
+    </section>
+
+</body>
+</html>

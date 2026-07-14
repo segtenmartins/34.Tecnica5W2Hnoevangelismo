@@ -141,10 +141,7 @@ section {
 header {
   background: var(--white);
   box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
+  position: relative;
 }
 
 .header-content {
@@ -785,13 +782,6 @@ video{width:100%;display:block;aspect-ratio:16/9;background:#000}
 </style>
 </head>
 <body>
-<header>
-<div class="container header-content">
-<a class="logo" href="#"><div class="logo-icon">5W</div>RÁDIO MATEUS 6:33</a>
-<span class="badge">TESE OFICIAL • DUAS VOLTAS</span>
-</div>
-</header>
-
 <section class="hero">
 <div class="container hero-content">
 <span class="badge">MÉTODO OFICIAL DESDE O INÍCIO</span>
@@ -1168,7 +1158,7 @@ video{width:100%;display:block;aspect-ratio:16/9;background:#000}
 </div>
 </div></section>
 
-<footer><div class="container"><p><b style="color:#f4d35e">Rádio Mateus 6:33</b> • Método 5W2H em Duas Voltas • Tese Oficial • Layout horizontal blocos sobre blocos</p><p style="margin-top:6px;font-size:.82rem">Volta 1: Ouvir • Dobradiça: Azul escuro #0a2342 • Volta 2: Apresentar</p></div></footer>
+<footer><div class="container"><p><b style="color:#f4d35e">Rádio Mateus 6:33</b> • Método 5W2H em Duas Voltas • Tese Oficial • Layout horizontal blocos sobre blocos</p><p style="margin-top:6px;font-size:.82rem">Volta 1: Ouvir • Dobradiça: Azul escuro #0a2342 • Volta 2: Apresentar</p><p style="margin-top:12px;font-size:.95rem">Pr João Alves • <a href="https://www.radiomateus633.com" target="_blank" style="color:#f4d35e;text-decoration:underline">www.radiomateus633.com</a></p></div></footer>
 <script>
 // mantém cards abertos como no modelo horizontal oficial
 document.querySelectorAll('.method-card').forEach(c=>c.classList.add('active'));

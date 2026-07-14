@@ -4,226 +4,984 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>5W2H em Duas Voltas - Tese Oficial | Rádio Mateus 6:33</title>
 <style>
-:root{--primary:#0a2342;--primary-light:#1d4e89;--accent:#d4af37;--accent-light:#f4d35e;--white:#fff;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-600:#475569;--gray-800:#0f172a;--radius:14px;--shadow:0 8px 24px rgba(10,35,66,.08)}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--gray-50);color:var(--gray-800);line-height:1.75}
-.container{max-width:1120px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-100)}
-.header{height:66px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:900;letter-spacing:-.02em;color:var(--primary);text-decoration:none;display:flex;gap:10px;align-items:center}
-.logo i{width:38px;height:38px;background:linear-gradient(135deg,var(--accent),var(--accent-light));display:grid;place-items:center;border-radius:10px;color:var(--primary);font-style:normal}
-.badge{display:inline-block;background:var(--primary);color:var(--accent-light);padding:6px 14px;border-radius:999px;font-size:.70rem;font-weight:800;letter-spacing:.07em}
-.hero{background:radial-gradient(1200px 600px at 50% -10%,#1d4e89 0%,#0a2342 55%);color:#fff;padding:80px 0 64px;text-align:center}
-.hero h1{font-size:clamp(2.1rem,5.2vw,3.6rem);line-height:1.02;margin:18px 0}
-.hero h1 span{color:var(--accent-light)}
-.hero p{max-width:820px;margin:0 auto;color:#cbd5e1;font-size:1.18rem}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none;border:0;cursor:pointer}
-.btn-gold{background:linear-gradient(135deg,var(--accent),var(--accent-light));color:var(--primary)}
-.btn-white{background:#fff;color:var(--primary)}
-section{padding:62px 0}
-.section-head{text-align:center;max-width:840px;margin:0 auto 36px}
-.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--primary);line-height:1.1;margin-bottom:10px}
-.section-head p{color:var(--gray-600);font-size:1.06rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-.card{background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-.card h3{color:var(--primary);margin-bottom:8px;font-size:1.15rem}
-.tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;padding:5px 11px;border-radius:999px;border:1px solid var(--gray-200);margin-bottom:10px;text-transform:uppercase}
-.tag-blue{background:#eff6ff;border-color:#bfdbfe;color:#1e40af}
-.tag-gold{background:#fefce8;border-color:#fde68a;color:#854d0e}
-.tag-dark{background:#0a2342;color:#f4d35e;border-color:#1d4e89}
-.tag-cyan{background:#ecfeff;border-color:#a5f3fc;color:#0e7490}
-.dark-card{background:#0a2342;color:#fff;border-radius:14px;padding:22px 24px;border-left:6px solid #d4af37;box-shadow:0 12px 32px rgba(10,35,66,.35);line-height:1.9}
+:root {
+  --primary: #0a2342;
+  --primary-light: #1d4e89;
+  --accent: #d4af37;
+  --accent-light: #f4d35e;
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
+  --success: #10b981;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --primary: #0a2342;
+  --primary-light: #1d4e89;
+  --accent: #d4af37;
+  --white: #0f172a;
+  --gray-50: #1e293b;
+  --gray-100: #334155;
+  --gray-200: #475569;
+  --gray-600: #cbd5e1;
+  --gray-800: #f1f5f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  transition: var(--transition);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
+  color: var(--accent-light);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--gray-600);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  color: var(--primary);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--gray-100);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Header */
+header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+[data-theme="dark"] .logo {
+  color: var(--accent);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: var(--gray-100);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: var(--transition);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  padding: 5rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--accent-light);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--accent-light);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--accent);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Method Introduction */
+.method-intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.intro-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--accent);
+}
+
+.intro-card h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.intro-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.logic-table {
+  width: 100%;
+  margin-top: 2rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.logic-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.logic-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.logic-table tr:last-child td {
+  border-bottom: none;
+}
+
+.logic-table tr:hover {
+  background: var(--gray-50);
+}
+
+/* 5W2H Grid */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.method-card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.method-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent), var(--accent-light));
+  transform: scaleY(0);
+  transition: var(--transition);
+}
+
+.method-card.active::before {
+  transform: scaleY(1);
+}
+
+.method-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.method-letter {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.method-title h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.method-subtitle {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.method-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.method-card.active .method-content {
+  max-height: 600px;
+  margin-top: 1rem;
+}
+
+.method-tip {
+  background: var(--gray-100);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  border-left: 3px solid var(--accent);
+}
+
+.method-example {
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 0.75rem;
+}
+
+.method-example strong {
+  color: var(--accent-light);
+}
+
+/* Roleplay Trainer */
+.trainer {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.chat-window {
+  background: var(--gray-50);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  min-height: 300px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--gray-200);
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  color: var(--gray-600);
+}
+
+.chat-bubble {
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.chat-bubble.user {
+  background: var(--primary);
+  color: var(--white);
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.other {
+  background: var(--gray-200);
+  color: var(--gray-800);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.tip {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--accent);
+  color: var(--gray-800);
+}
+
+.response-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.response-btn {
+  text-align: left;
+  padding: 1rem;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--gray-800);
+}
+
+.response-btn:hover {
+  border-color: var(--accent);
+  background: var(--gray-50);
+}
+
+.trainer-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* Checklist */
+.checklist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.checklist-phase {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--gray-100);
+}
+
+.phase-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.checklist-item:hover {
+  background: var(--gray-50);
+}
+
+.checklist-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.checklist-item label {
+  flex: 1;
+  cursor: pointer;
+  color: var(--gray-800);
+}
+
+.checklist-item input:checked + label {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Transition Section */
+.transition-cards {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.transition-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.transition-card::before {
+  content: '1';
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(212, 175, 55, 0.1);
+  pointer-events: none;
+}
+
+.transition-card:nth-child(2)::before { content: '2'; }
+.transition-card:nth-child(3)::before { content: '3'; }
+
+.transition-phrase {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+[data-theme="dark"] .transition-phrase {
+  color: var(--accent-light);
+}
+
+.copy-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-verse {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--accent-light);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--accent-light);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.hidden { display: none !important; }
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--success);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(200px);
+  transition: transform 0.3s ease;
+  z-index: 2000;
+}
+
+.toast.show {
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section { padding: 2.5rem 0; }
+  .container { padding: 0 1rem; }
+  .header-content { padding: 0.75rem 0; }
+  .logo { font-size: 1rem; }
+  .methodology-grid, .method-intro { grid-template-columns: 1fr; }
+  .checklist-container { grid-template-columns: 1fr; }
+  .hero { padding: 3rem 0 2rem; }
+  .trainer { padding: 1.25rem; }
+  .chat-bubble { max-width: 95%; }
+  .footer-links { flex-direction: column; gap: 1rem; }
+  .logic-table { font-size: 0.875rem; }
+  .logic-table th, .logic-table td { padding: 0.75rem 0.5rem; }
+}
+
+/* === TUDO UM EMBAIXO DO OUTRO - COLUNA ÚNICA VERTICAL === */
+.method-intro,
+.methodology-grid,
+.checklist-container,
+.transition-cards {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  gap: 1.5rem !important;
+  overflow: visible !important;
+  width: 100% !important;
+}
+
+.method-intro .intro-card,
+.methodology-grid .method-card,
+.checklist-container .checklist-phase,
+.transition-cards .transition-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  flex: none !important;
+}
+
+/* Estudo de caso: um embaixo do outro */
+#estudo-caso .methodology-grid .method-card {
+  margin-bottom: 0 !important;
+}
+
+/* Abre o conteúdo automaticamente pra ver tudo */
+#estudo-caso .methodology-grid .method-card .method-content {
+  max-height: none !important;
+  overflow: visible !important;
+  display: block !important;
+  margin-top: 1rem !important;
+}
+
+</style>
+<style>
+/* Ajustes extras para manter seu azul escuro aprovado */
+.dark-card{background:#0a2342;color:#fff;border-radius:12px;padding:1.25rem 1.5rem;border-left:5px solid #d4af37;box-shadow:0 10px 28px rgba(10,35,66,.35);line-height:1.9}
 .dark-card strong{color:#f4d35e}
 .dark-card span{color:#fff}
-.list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:10px}
-.list li{display:flex;gap:10px;align-items:flex-start;background:var(--gray-50);border:1px solid var(--gray-100);border-radius:10px;padding:12px 14px}
-.list li b{color:var(--primary);min-width:64px;display:inline-block}
-.video-wrap{background:#0f172a;border:1px solid #1e3a5f;border-radius:18px;overflow:hidden}
+.method-letter{background:var(--primary);color:#fff;min-width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:800}
+.method-letter.gold{background:#d4af37;color:#0a2342}
+.method-letter.cyan{background:#06b6d4;color:#fff}
+.method-letter.purple{background:#7c3aed;color:#fff}
+.video-wrap{background:#0f172a;border:1px solid #1e3a5f;border-radius:18px;overflow:hidden;margin-top:1rem}
 video{width:100%;display:block;aspect-ratio:16/9;background:#000}
-footer{background:#0a2342;color:#94a3b8;padding:40px 0;border-top:4px solid var(--accent);text-align:center}
-footer a{color:#f4d35e;text-decoration:none}
-hr.sep{border:0;height:1px;background:linear-gradient(90deg,transparent,#e2e8f0,transparent);margin:0}
+.tag-hist{display:inline-block;background:#fefce8;border:1px solid #fde68a;color:#854d0e;padding:4px 10px;border-radius:999px;font-size:.70rem;font-weight:800;letter-spacing:.05em}
 </style>
 </head>
 <body>
-<header><div class="container header"><a class="logo" href="#"><i>5W</i> RÁDIO MATEUS 6:33</a><span class="badge">TESE OFICIAL • DUAS VOLTAS</span></div></header>
+<header>
+<div class="container header-content">
+<a class="logo" href="#"><div class="logo-icon">5W</div>RÁDIO MATEUS 6:33</a>
+<span class="badge">TESE OFICIAL • DUAS VOLTAS</span>
+</div>
+</header>
 
 <section class="hero">
-<div class="container">
-<span class="badge" style="background:rgba(212,175,55,.14);border:1px solid rgba(212,175,55,.4);color:#f4d35e">MÉTODO OFICIAL DESDE O INÍCIO</span>
-<h1>Evangelismo não é debate.<br>É <span>Duas Voltas</span> de conversa.</h1>
-<p>A tese fundante do 5W2H Evangelístico: <b style="color:#fff">Volta 1</b> você usa as 7 perguntas para ouvir e mapear o outro com qualidade. <b style="color:#fff">Volta 2</b> você usa as mesmas 7 perguntas para apresentar Jesus como resposta pessoal. Quem nunca viu outro modelo, aprende direto o correto.</p>
-<div style="margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-<a href="#volta1" class="btn btn-gold">Começar pela Volta 1 → Escuta</a>
-<a href="#casos" class="btn btn-white">Ver Casos Práticos</a>
+<div class="container hero-content">
+<span class="badge">MÉTODO OFICIAL DESDE O INÍCIO</span>
+<h1>Evangelismo não é debate.<br>É <span style="color:var(--accent-light)">Duas Voltas</span> de conversa.</h1>
+<p class="hero-subtitle">A tese fundante: <b style="color:#fff">Volta 1</b> você usa as 7 perguntas para ouvir e mapear. <b style="color:#fff">Volta 2</b> você usa as mesmas 7 para apresentar Jesus. Quem chega agora aprende direto o correto.</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+<a href="#historia" class="btn btn-accent">História em 60s</a>
+<a href="#volta1" class="btn btn-primary" style="background:#fff;color:#0a2342">Começar pela Volta 1 →</a>
 </div>
 </div>
 </section>
 
-<section style="background:#fff">
+<!-- HISTÓRIA - BLOCOS HORIZONTAIS -->
+<section id="historia">
 <div class="container">
-<div class="section-head"><span class="tag tag-gold">TESE FUNDANTE</span><h2>Por que Duas Voltas funciona e Volta Única trava</h2><p>Quando você já apresenta a tese na primeira volta, o outro se defende. Quando você escuta na primeira volta, ele se abre para ouvir sua tese na segunda.</p></div>
-<div class="grid">
-<div class="card"><span class="tag tag-blue">PSICOLOGIA</span><h3>Escuta desativa defesa</h3><p style="color:var(--gray-600)">A escuta empática de Rogers baixa a reatância. A pessoa se sente validada. Cérebro em modo abertura, não em modo debate. Você ganha o direito de ser ouvido porque primeiro ouviu.</p></div>
-<div class="card"><span class="tag tag-gold">SOCIOLOGIA</span><h3>Respeito antes de proposta</h3><p style="color:var(--gray-600)">Na cultura líquida, impor tese é lido como autoritarismo. Fazer perguntas curiosas é lido como respeito. A Volta 1 comunica: sua história importa antes da minha resposta.</p></div>
-<div class="card"><span class="tag tag-dark">TEOLOGIA</span><h3>Jesus habitou antes de revelar</h3><p style="color:var(--gray-600)">João 1:14 primeiro habitou entre nós. João 4: Jesus faz 5 perguntas à samaritana antes de dizer "Eu o sou". Encarnação precede proclamação.</p></div>
-</div>
-</div>
-</section>
+<div class="section-header"><span class="section-tag">História em 60 segundos</span><h2>De onde vem o 5W2H?</h2><p>De poema, para fábrica, para conversa que transforma.</p></div>
+<div style="display:flex;flex-direction:column;gap:1.5rem">
 
-<hr class="sep">
+<div class="card method-card active" style="border-left:5px solid #0a2342;width:100%;max-width:100%">
+<div class="method-header"><div class="method-letter">1902</div><h3 class="method-title">Rudyard Kipling • Six Honest Serving Men</h3></div>
+<div class="method-content" style="max-height:none;display:block;opacity:1;margin-top:1rem">
+<p><em>"I keep six honest serving-men, they taught me all I knew; Their names are What and Why and When and How and Where and Who."</em> Seis perguntas honestas que ensinam tudo. Base do pensamento investigativo.</p>
+<div style="background:#f9fafb;padding:0.8rem 1rem;border-radius:8px;border:1px solid #e5e7eb;font-family:monospace;text-align:center">What • Why • Where • When • Who • How</div>
+</div></div>
 
+<div class="card method-card active" style="border-left:5px solid #d4af37;width:100%;max-width:100%">
+<div class="method-header"><div class="method-letter gold">1950</div><h3 class="method-title">Toyota e PDCA • Virou 5W2H</h3></div>
+<div class="method-content" style="max-height:none;display:block;opacity:1;margin-top:1rem">
+<p>Exército americano e Toyota transformaram em checklist de qualidade. Adicionaram o 7º: <b>How Much</b> (quanto custa). Virou <b>5W2H</b>: ferramenta para não esquecer nada num plano. Não é teoria científica, é heurístico organizacional.</p>
+<div style="background:#fefce8;padding:0.8rem 1rem;border-radius:8px;border:1px solid #fde68a;font-family:monospace;text-align:center"><b>What, Why, Where, When, Who, How, How Much</b></div>
+</div></div>
+
+<div class="card method-card active" style="border-left:5px solid #06b6d4;width:100%;max-width:100%;background:linear-gradient(180deg,#fff 0%,#f0fdfa 100%)">
+<div class="method-header"><div class="method-letter cyan">2025</div><h3 class="method-title">Adaptação Evangelística • Tese das Duas Voltas</h3></div>
+<div class="method-content" style="max-height:none;display:block;opacity:1;margin-top:1rem">
+<p>Trouxemos da fábrica para a conversa, com a virada que Kipling e Toyota nunca precisaram:<br><b>Volta 1:</b> 7 perguntas para <b>ouvir e mapear</b> a história.<br><b>Volta 2:</b> mesmas 7 para <b>apresentar Jesus</b> como resposta pessoal.<br><br><b>Não é correção. Essa é a tese oficial desde o início.</b></p>
+<p style="text-align:center;color:#6b7280;font-size:.88rem;margin-top:8px">Kipling criou para entender o mundo. Toyota para organizar a fábrica. Nós para compreender o coração e apresentar Cristo.</p>
+</div></div>
+
+</div></div></section>
+
+<!-- TESE FUNDANTE - BLOCOS HORIZONTAIS -->
+<section style="background:var(--gray-50)">
+<div class="container">
+<div class="section-header"><span class="section-tag">Tese Fundante</span><h2>Por que Duas Voltas funciona e Volta Única trava</h2></div>
+<div style="display:flex;flex-direction:column;gap:1.2rem">
+
+<div class="card method-card active" style="border-left:5px solid #1d4e89;width:100%"><div class="method-header"><div class="method-letter" style="background:#1d4e89">Ψ</div><h3 class="method-title">Psicologia • Escuta desativa defesa</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Escuta empática de Rogers baixa reatância. Pessoa validada entra em modo abertura, não debate. Você ganha direito de ser ouvido porque primeiro ouviu.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #d4af37;width:100%"><div class="method-header"><div class="method-letter gold">S</div><h3 class="method-title">Sociologia • Respeito antes de proposta</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Na cultura líquida, impor tese é autoritarismo. Perguntar com curiosidade é respeito. Volta 1 comunica: sua história importa antes da minha resposta.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #0a2342;width:100%"><div class="method-header"><div class="method-letter">T</div><h3 class="method-title">Teologia • Jesus habitou antes de revelar</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>João 1:14 primeiro habitou. João 4 faz 5 perguntas antes de dizer "Eu o sou". Encarnação precede proclamação.</p></div></div>
+
+</div></div></section>
+
+<!-- VOLTA 1 -->
 <section id="volta1">
 <div class="container">
-<div class="section-head"><span class="tag tag-blue">VOLTA 1 • DIAGNÓSTICO • 80% OUVIR / 20% FALAR</span><h2>As 7 Perguntas para Explorar e Conhecer</h2><p>Objetivo: mapear, não corrigir. Use as palavras dele. Não debata. Anote mentalmente.</p></div>
-<div class="grid">
-<div class="card"><h3>1. What • O QUÊ</h3><p style="color:var(--gray-600)"><b>Pergunte:</b> "O que exatamente significa isso para você?"<br>Quebra clichês como "universo", "energia", "sou meu próprio deus".</p></div>
-<div class="card"><h3>2. How • COMO</h3><p style="color:var(--gray-600)"><b>Pergunte:</b> "Como isso funciona no seu dia a dia?"<br>Traz do abstrato para o concreto, revela prática real.</p></div>
-<div class="card"><h3>3. Why • POR QUÊ</h3><p style="color:var(--gray-600)"><b>Pergunte:</b> "Por que esse caminho faz mais sentido hoje?"<br>Revela ferida, decepção com igreja ou busca por autonomia.</p></div>
-<div class="card"><h3>4. Where • ONDE</h3><p style="color:var(--gray-600)"><b>Pergunte:</b> "Onde você se sente mais em paz e onde se sente mais vazio com isso?"</p></div>
-<div class="card"><h3>5. When • QUANDO</h3><p style="color:var(--gray-600)"><b>Pergunte:</b> "Quando você percebe que isso não sustenta, que a força acaba?"<br>Abre porta para falar de limite humano.</p></div>
-<div class="card"><h3>6. Who • QUEM</h3><p style="color:var(--gray-600)"><b>Pergunte:</b> "Quem te sustenta quando você não consegue se sustentar?"<br>Pergunta chave que expõe a solidão da autossuficiência.</p></div>
-<div class="card"><h3>7. How Much • QUANTO</h3><p style="color:var(--gray-600)"><b>Pergunte:</b> "Quanto isso tem te custado emocionalmente para manter sozinho?"</p></div>
-</div>
-</div>
-</section>
+<div class="section-header"><span class="section-tag" style="background:#dbeafe;color:#1e40af;border:1px solid #bfdbfe">Volta 1 • Diagnóstico • 80% ouvir</span><h2>As 7 Perguntas para Explorar e Conhecer</h2><p>Mapear, não corrigir. Use as palavras dele.</p></div>
+<div style="display:flex;flex-direction:column;gap:1.2rem">
 
-<section id="dobradica" style="background:#f8fafc">
-<div class="container" style="max-width:880px">
-<div class="section-head"><span class="tag tag-gold">A DOBRADIÇA ENTRE AS VOLTAS</span><h2>A Pergunta que Vira a Chave</h2><p>Você não entra com sermão. Você resume o que ouviu e pede permissão para apresentar outro Quem.</p></div>
-<div class="dark-card">
-<strong>Sua Fala:</strong> <span>"Se todos são falhos, você se inclui, né? E se existir Alguém perfeito que não falhou e se ofereceu para pagar pelos nossos erros? Basta reconhecer que não conseguimos sozinhos e nos entregar a Ele. Esse Alguém é Jesus. Você gostaria de conhecer melhor essa verdade?"</span>
-</div>
-<p style="text-align:center;color:var(--gray-600);font-size:.9rem;margin-top:10px">Frase preservada integralmente, com fundo azul escuro #0a2342 e alto contraste para leitura, como aprovado.</p>
-</div>
-</section>
+<div class="card method-card active" style="border-left:5px solid #1d4e89;width:100%"><div class="method-header"><div class="method-letter">What</div><h3 class="method-title">O QUÊ • O que significa para você?</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p><b>Pergunte:</b> "O que exatamente você quer dizer com 'universo', 'energia', 'eu me basto'?" Quebra clichês.</p></div></div>
 
+<div class="card method-card active" style="border-left:5px solid #1d4e89;width:100%"><div class="method-header"><div class="method-letter">How</div><h3 class="method-title">COMO • Como funciona no dia a dia?</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p><b>Pergunte:</b> "Como isso funciona na prática quando a ansiedade vem às 3h da manhã?"</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #1d4e89;width:100%"><div class="method-header"><div class="method-letter">Why</div><h3 class="method-title">POR QUÊ • Por que esse caminho hoje?</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Revela ferida ou valor. "Por que esse caminho faz mais sentido que outros hoje?"</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #1d4e89;width:100%"><div class="method-header"><div class="method-letter">Where</div><h3 class="method-title">ONDE • Onde se sente em paz e onde vazio?</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Mapeia lugares emocionais e espirituais de paz e crise.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #1d4e89;width:100%"><div class="method-header"><div class="method-letter">When</div><h3 class="method-title">QUANDO • Quando não sustenta?</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>"Quando você percebe que a força acaba?" Abre porta para limite humano.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #d4af37;width:100%"><div class="method-header"><div class="method-letter gold">Who</div><h3 class="method-title">QUEM • Quem te sustenta quando você falha?</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Pergunta chave que expõe solidão da autossuficiência.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #0a2342;width:100%"><div class="method-header"><div class="method-letter">How Much</div><h3 class="method-title">QUANTO • Quanto custa manter sozinho?</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>"Quanto tem te custado emocionalmente manter essa imagem?"</p></div></div>
+
+</div></div></section>
+
+<!-- DOBRADIÇA -->
+<section style="background:#f8fafc">
+<div class="container" style="max-width:900px">
+<div class="section-header"><span class="section-tag" style="background:#fef3c7;color:#92400e">A Dobradiça entre as voltas</span><h2>A Pergunta que Vira a Chave</h2><p>Você resume o que ouviu e pede permissão para apresentar outro Quem.</p></div>
+<div class="dark-card" style="border-left:5px solid #d4af37;background:#0a2342;color:#fff;padding:1.25rem 1.5rem;border-radius:12px;font-size:1.12rem;line-height:1.9;box-shadow:0 10px 28px rgba(10,35,66,.45)">
+<strong style="color:#f4d35e">Sua Fala:</strong> <span style="color:#fff">"Se todos são falhos, você se inclui, né? E se existir Alguém perfeito que não falhou e se ofereceu para pagar pelos nossos erros? Basta reconhecer que não conseguimos sozinhos e nos entregar a Ele. Esse Alguém é Jesus. Você gostaria de conhecer melhor essa verdade?"</span>
+</div>
+<p style="text-align:center;color:#6b7280;font-size:.9rem;margin-top:10px">Frase preservada integralmente, fundo azul escuro #0a2342 com alto contraste, como aprovado.</p>
+</div></section>
+
+<!-- VOLTA 2 -->
 <section id="volta2" style="background:#fff">
 <div class="container">
-<div class="section-head"><span class="tag tag-dark">VOLTA 2 • TESE • APRESENTAÇÃO</span><h2>As Mesmas 7 Perguntas, Agora com a Resposta de Jesus</h2><p>Você não muda de assunto. Você responde às dores que ele mesmo revelou na Volta 1, usando as mesmas categorias.</p></div>
-<div class="grid">
-<div class="card"><h3>1. What • O QUÊ eu apresento</h3><p style="color:var(--gray-600)">Não uma energia, uma Pessoa. João 14:6 - Eu SOU o caminho. Energia não ouve, Pessoa ouve.</p></div>
-<div class="card"><h3>2. How • COMO Ele resolve</h3><p style="color:var(--gray-600)">Não por seu esforço, mas por graça. Ef 2:8-9. Buda disse "seja sua lâmpada". Jesus disse "Eu sou a luz".</p></div>
-<div class="card"><h3>3. Why • POR QUÊ precisou</h3><p style="color:var(--gray-600)">Porque todos falhamos. Rm 3:23. Culpa real precisa de perdão real, não de reencarnação ou positividade.</p></div>
-<div class="card"><h3>4. Where • ONDE habita</h3><p style="color:var(--gray-600)">Não num templo, mas no coração. 1Co 6:19. Deus não está longe no universo, está perto em você se crer.</p></div>
-<div class="card"><h3>5. When • QUANDO</h3><p style="color:var(--gray-600)">Hoje. 2Co 6:2. Não quando ficar forte, mas quando reconhecer que é fraco. A força se aperfeiçoa na fraqueza.</p></div>
-<div class="card"><h3>6. Who • QUEM sustenta</h3><p style="color:var(--gray-600)">Não você. O Bom Pastor. Sl 23. Quem nunca falha, porque não é falho como nós.</p></div>
-<div class="card"><h3>7. How Much • QUANTO custa</h3><p style="color:var(--gray-600)">Para você: nada, é dom. Para Ele: tudo. Is 53. Graça gratuita, não barata.</p></div>
-</div>
-</div>
-</section>
+<div class="section-header"><span class="section-tag" style="background:#0a2342;color:#f4d35e">Volta 2 • Tese • Apresentação</span><h2>As mesmas 7 perguntas, agora com a resposta de Jesus</h2></div>
+<div style="display:flex;flex-direction:column;gap:1.2rem">
 
+<div class="card method-card active" style="border-left:5px solid #d4af37;width:100%"><div class="method-header"><div class="method-letter gold">What</div><h3 class="method-title">O QUÊ eu apresento • Uma Pessoa, não energia</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Não uma energia impessoal, mas Pessoa: Jesus. João 14:6 "Eu sou". Energia não ouve, Pessoa ouve.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #d4af37;width:100%"><div class="method-header"><div class="method-letter gold">How</div><h3 class="method-title">COMO resolve • Graça, não esforço</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Ef 2:8-9. Buda disse "seja sua lâmpada". Jesus disse "Eu sou a luz". Você não se acende, se abre.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #0a2342;width:100%"><div class="method-header"><div class="method-letter">Why</div><h3 class="method-title">POR QUÊ precisou • Todos falhamos</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Rm 3:23. Culpa real precisa de perdão real, não de reencarnação ou positividade.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #0a2342;width:100%"><div class="method-header"><div class="method-letter">Where</div><h3 class="method-title">ONDE habita • No coração</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>1Co 6:19. Deus não está longe no universo, está perto em quem crê.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #0a2342;width:100%"><div class="method-header"><div class="method-letter">When</div><h3 class="method-title">QUANDO • Hoje, fraco, não quando forte</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>2Co 6:2. Força se aperfeiçoa na fraqueza.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #7c3aed;width:100%"><div class="method-header"><div class="method-letter purple">Who</div><h3 class="method-title">QUEM sustenta • O Bom Pastor que não falha</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Não você. Jesus, Sl 23.</p></div></div>
+
+<div class="card method-card active" style="border-left:5px solid #0a2342;width:100%"><div class="method-header"><div class="method-letter">How Much</div><h3 class="method-title">QUANTO custa • Nada para você, tudo para Ele</h3></div><div class="method-content" style="max-height:none;display:block;margin-top:1rem"><p>Is 53. Graça gratuita, não barata.</p></div></div>
+
+</div></div></section>
+
+<!-- CASOS EM BLOCOS HORIZONTAIS -->
 <section id="casos" style="background:var(--gray-50)">
 <div class="container">
-<div class="section-head"><span class="tag tag-gold">CASOS PRÁTICOS EM DUAS VOLTAS</span><h2>Como aplicar a tese oficial nos 4 perfis mais comuns</h2><p>Cada caso mostra Volta 1 (o que perguntar) e Volta 2 (o que apresentar). Copie e use.</p></div>
+<div class="section-header"><span class="section-tag">Casos Práticos em Duas Voltas</span><h2>4 perfis mais comuns • Blocos sobre blocos</h2></div>
+<div style="display:flex;flex-direction:column;gap:1.8rem">
 
 <!-- CASO 1 -->
-<div class="card" style="margin-bottom:18px;border-top:4px solid #d4af37">
-<span class="tag tag-gold">CASO 1 • ESPIRITUALIDADE IMPESSOAL</span>
-<h2 style="color:var(--primary);font-size:1.6rem;margin:6px 0">O Universo • Do "universo cuida" ao Deus que cuida</h2>
-<div class="grid" style="margin-top:16px">
-<div style="background:#fefce8;border:1px solid #fde68a;border-radius:12px;padding:16px"><b style="color:#854d0e">VOLTA 1 - O QUE PERGUNTAR (Escuta)</b>
-<ul class="list">
-<li><b>What:</b> Quando você diz "universo", o que você imagina? Uma força, uma energia, uma pessoa?</li>
-<li><b>How:</b> Como você sente esse cuidado do universo no dia a dia?</li>
-<li><b>When:</b> Quando o universo ficou em silêncio e não cuidou?</li>
-<li><b>Who:</b> Se o universo não tem ouvidos, quem te ouve quando você chora à noite?</li>
-</ul></div>
-<div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px"><b style="color:#0a2342">VOLTA 2 - O QUE APRESENTAR (Tese)</b>
-<ul class="list">
-<li><b>What:</b> Eu não creio numa coisa, creio em Alguém que tem nome, Jesus, que diz "Eu cuido de você" 1Pe 5:7</li>
-<li><b>How:</b> Ele cuida não com vibração, mas com presença. Ele entrou na nossa dor.</li>
-<li><b>Who:</b> O universo não morreu por você. Alguém morreu. E esse Alguém ressuscitou para te ouvir.</li>
-</ul>
-<div class="dark-card" style="margin-top:12px;font-size:.96rem"><strong>Dobradiça:</strong> <span>"Faz sentido o universo cuidar se ele nem sabe que você existe? E se o cuidado viesse de um Pai que sabe seu nome?"</span></div>
-</div>
-</div>
-</div>
+<div class="card method-card active" style="border-left:5px solid #d4af37;width:100%">
+<div class="method-header"><div class="method-letter gold">1</div><h3 class="method-title">Caso 1 • Universo • Do "universo cuida" ao Deus que cuida</h3></div>
+<div class="method-content" style="max-height:none;display:block;margin-top:1rem">
+<div style="display:flex;flex-direction:column;gap:1rem">
+<div style="background:#fefce8;border:1px solid #fde68a;border-radius:10px;padding:14px"><b style="color:#854d0e">VOLTA 1 - O QUE PERGUNTAR (Escuta)</b><br>
+• What: Quando diz "universo", o que imagina? Força, energia, pessoa?<br>
+• How: Como sente esse cuidado no dia a dia?<br>
+• When: Quando o universo ficou em silêncio?<br>
+• Who: Se universo não tem ouvidos, quem te ouve às 3h da manhã?</div>
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px"><b style="color:#0a2342">VOLTA 2 - O QUE APRESENTAR</b><br>
+• What: Não creio numa coisa, creio em Alguém com nome: Jesus 1Pe 5:7<br>
+• How: Ele cuida não com vibração, mas com presença encarnada<br>
+• Who: Universo não morreu por você. Alguém morreu e ressuscitou para te ouvir.<br>
+<div class="dark-card" style="margin-top:10px;font-size:.95rem"><strong>Dobradiça:</strong> <span>"Faz sentido o universo cuidar se nem sabe que você existe? E se o cuidado viesse de um Pai que sabe seu nome?"</span></div>
+</div></div></div></div>
 
 <!-- CASO 2 -->
-<div class="card" style="margin-bottom:18px;border-top:4px solid #7c3aed">
-<span class="tag" style="background:#ede9fe;border-color:#ddd6fe;color:#5b21b6">CASO 2 • FILOSOFIA DO ESFORÇO</span>
-<h2 style="color:var(--primary);font-size:1.6rem;margin:6px 0">Budismo / Mindfulness • Do esforço próprio à graça</h2>
-<div class="grid" style="margin-top:16px">
-<div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:16px"><b style="color:#5b21b6">VOLTA 1 - O QUE PERGUNTAR (Escuta)</b>
-<ul class="list">
-<li><b>What:</b> O que é iluminação para você? O fim do desejo ou a paz apesar do desejo?</li>
-<li><b>How:</b> Como você tenta esvaziar a mente quando a culpa vem?</li>
-<li><b>How Much:</b> Quanto tempo por dia você precisa meditar para se sentir ok? E quando não consegue?</li>
-<li><b>Who:</b> Se todos são falhos, inclusive Buda, quem pode pagar o preço da falha?</li>
-</ul></div>
-<div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px"><b style="color:#0a2342">VOLTA 2 - O QUE APRESENTAR (Tese)</b>
-<ul class="list">
-<li><b>What:</b> Buda apontou o caminho. Jesus disse "Eu SOU o caminho" Jo 14:6. Um é mapa, outro é guia.</li>
-<li><b>How:</b> Buda disse "seja sua lâmpada". Jesus disse "Eu sou a luz do mundo" Jo 8:12. Você não precisa se acender, precisa se abrir.</li>
-<li><b>Who:</b> A frase oficial entra aqui:</li>
-</ul>
-<div class="dark-card" style="margin-top:10px;font-size:1.02rem"><strong>Sua Fala:</strong> <span>"Se todos são falhos, você se inclui, né? E se existir Alguém perfeito que não falhou e se ofereceu para pagar pelos nossos erros? Basta reconhecer que não conseguimos sozinhos e nos entregar a Ele. Esse Alguém é Jesus. Você gostaria de conhecer melhor essa verdade?"</span></div>
-</div>
-</div>
-</div>
+<div class="card method-card active" style="border-left:5px solid #7c3aed;width:100%">
+<div class="method-header"><div class="method-letter purple">2</div><h3 class="method-title">Caso 2 • Budismo / Mindfulness • Do esforço à graça</h3></div>
+<div class="method-content" style="max-height:none;display:block;margin-top:1rem">
+<div style="display:flex;flex-direction:column;gap:1rem">
+<div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;padding:14px"><b style="color:#5b21b6">VOLTA 1 - Escuta</b><br>
+• What: O que é iluminação? Fim do desejo ou paz apesar do desejo?<br>
+• How: Como tenta esvaziar a mente quando culpa vem?<br>
+• How Much: Quanto tempo medita para se sentir ok? E quando não consegue?<br>
+• Who: Se todos são falhos, inclusive Buda, quem paga o preço da falha?</div>
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px"><b style="color:#0a2342">VOLTA 2 - Tese</b><br>
+• Buda apontou caminho. Jesus disse "Eu SOU o caminho" Jo 14:6<br>
+• Buda: "seja sua lâmpada". Jesus: "Eu sou a luz" Jo 8:12<br>
+<div class="dark-card" style="margin-top:10px"><strong>Sua Fala:</strong> <span>"Se todos são falhos, você se inclui, né? E se existir Alguém perfeito que não falhou e se ofereceu para pagar pelos nossos erros? Basta reconhecer que não conseguimos sozinhos e nos entregar a Ele. Esse Alguém é Jesus. Você gostaria de conhecer melhor essa verdade?"</span></div>
+</div></div></div></div>
 
 <!-- CASO 3 -->
-<div class="card" style="margin-bottom:18px;border-top:4px solid #b45309">
-<span class="tag" style="background:#fef3c7;border-color:#fde68a;color:#92400e">CASO 3 • LEI E DESCANSO</span>
-<h2 style="color:var(--primary);font-size:1.6rem;margin:6px 0">O Guardião do Sábado • Do descanso de um dia ao descanso de uma Pessoa</h2>
-<div class="grid" style="margin-top:16px">
-<div style="background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px"><b style="color:#92400e">VOLTA 1 - O QUE PERGUNTAR (Escuta)</b>
-<ul class="list">
-<li><b>What:</b> O que o sábado significa para você? Descanso físico ou paz com Deus?</li>
-<li><b>How:</b> Como você se sente no domingo à noite, depois de ter guardado tudo certo no sábado?</li>
-<li><b>When:</b> Quando você sente culpa por não ter guardado o suficiente?</li>
-<li><b>How Much:</b> Quanto de paz você tem que produzir para ter certeza de salvação?</li>
-</ul></div>
-<div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px"><b style="color:#0a2342">VOLTA 2 - O QUE APRESENTAR (Tese)</b>
-<ul class="list">
-<li><b>What:</b> O sábado foi sombra, Cristo é a realidade Cl 2:16-17. Sombra aponta, não sustenta.</li>
-<li><b>How:</b> Hebreus 4:9-10 diz que resta um descanso para o povo de Deus, e quem entra no descanso descansa das suas obras, como Deus das Dele.</li>
-<li><b>Who:</b> Jesus disse "Vinde a mim todos cansados e eu vos darei descanso" Mt 11:28. O descanso não é um dia, é uma Pessoa.</li>
-</ul>
-<div class="dark-card" style="margin-top:12px;font-size:.96rem"><strong>Dobradiça:</strong> <span>"Se o sábado foi feito por causa do homem e não o homem por causa do sábado Mc 2:27, e se o Dono do sábado está te chamando para descansar Nele hoje, você gostaria de experimentar esse descanso?"</span></div>
-</div>
-</div>
-</div>
+<div class="card method-card active" style="border-left:5px solid #b45309;width:100%">
+<div class="method-header"><div class="method-letter" style="background:#b45309">3</div><h3 class="method-title">Caso 3 • Guardião do Sábado • Do descanso de um dia ao descanso de uma Pessoa</h3></div>
+<div class="method-content" style="max-height:none;display:block;margin-top:1rem">
+<div style="display:flex;flex-direction:column;gap:1rem">
+<div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:14px"><b style="color:#92400e">VOLTA 1 - Escuta</b><br>
+• What: O que sábado significa? Descanso físico ou paz com Deus?<br>
+• How: Como se sente domingo à noite depois de guardar tudo?<br>
+• When: Quando sente culpa por não guardar suficiente?<br>
+• How Much: Quanta paz precisa produzir para ter certeza?</div>
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px"><b style="color:#0a2342">VOLTA 2 - Tese</b><br>
+• Sábado foi sombra, Cristo realidade Cl 2:16-17<br>
+• Hb 4:9-10 resta descanso, quem entra descansa das obras<br>
+• Mt 11:28 descanso não é dia, é Pessoa<br>
+<div class="dark-card" style="margin-top:10px;font-size:.95rem"><strong>Dobradiça:</strong> <span>"Se sábado foi feito por causa do homem Mc 2:27, e Dono do sábado te chama para descansar Nele hoje, quer experimentar?"</span></div>
+</div></div></div></div>
 
 <!-- CASO 4 -->
-<div class="card" style="border:2px solid #06b6d4;box-shadow:0 0 0 6px rgba(6,182,214,.12)">
-<span class="tag tag-cyan">CASO 4 • AUTOSSUFICIÊNCIA • COM VÍDEO</span>
-<h2 style="color:var(--primary);font-size:1.6rem;margin:6px 0">O Rapaz da Praia • Da autossuficiência ao encontro</h2>
-<p style="color:var(--gray-600);margin:6px 0 14px">Perfil: Jovem atleta, vida perfeita no Instagram, frases "eu me basto", "o universo me guia", mas vazio e ansioso quando a performance falha.</p>
-<div class="grid">
-<div style="background:#ecfeff;border:1px solid #a5f3fc;border-radius:12px;padding:16px"><b style="color:#0e7490">VOLTA 1 - O QUE PERGUNTAR (Escuta antes do vídeo)</b>
-<ul class="list">
-<li><b>What:</b> O que significa "ser forte" para você?</li>
-<li><b>How:</b> Como você lida quando a força acaba e a ansiedade vem?</li>
-<li><b>When:</b> Quando foi a última vez que você sentiu que não aguentava manter tudo?</li>
-<li><b>Who:</b> Quem te segura quando você não consegue se segurar?</li>
-<li><b>How Much:</b> Quanto te custa manter essa imagem de forte o tempo todo?</li>
-</ul>
+<div class="card method-card active" style="border-left:5px solid #06b6d4;width:100%;box-shadow:0 0 0 4px rgba(6,182,214,.12)">
+<div class="method-header"><div class="method-letter cyan">4</div><h3 class="method-title">Caso 4 • Rapaz da Praia • Da autossuficiência ao encontro 🎥</h3></div>
+<div class="method-content" style="max-height:none;display:block;margin-top:1rem">
+<p style="color:#475569">Perfil: Jovem atleta, vida perfeita no Instagram, "eu me basto", vazio quando performance falha.</p>
+<div style="display:flex;flex-direction:column;gap:1rem;margin-top:10px">
+<div style="background:#ecfeff;border:1px solid #a5f3fc;border-radius:10px;padding:14px"><b style="color:#0e7490">VOLTA 1 - Antes do vídeo</b><br>
+• What: O que significa ser forte para você?<br>
+• When: Quando última vez sentiu que não aguentava?<br>
+• Who: Quem te segura quando não consegue se segurar?<br>
+• How Much: Quanto custa manter imagem de forte?</div>
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px"><b style="color:#0a2342">VOLTA 2 - Após o vídeo</b><br>
+• What: Não técnica para ficar forte, Alguém que te encontra fraco 2Co 12:9<br>
+• How: Ele não gritou da margem, pulou na água, na cruz pagou<br>
+• Who: Mar não tem misericórdia, Jesus tem, acalma mar e você</div>
 </div>
-<div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px"><b style="color:#0a2342">VOLTA 2 - O QUE APRESENTAR (Após o vídeo)</b>
-<ul class="list">
-<li><b>What:</b> Não te apresento uma técnica para ficar mais forte, te apresento Alguém que te encontra fraco. 2Co 12:9 "Minha graça te basta".</li>
-<li><b>How:</b> Ele não ficou na margem gritando instruções, Ele pulou na água. Na cruz Ele pagou o que você não podia pagar.</li>
-<li><b>Who:</b> O mar que você tenta controlar não tem misericórdia. Jesus tem. Ele acalma o mar e acalma você.</li>
-</ul>
-</div>
-</div>
-<div class="video-wrap" style="margin-top:18px">
-<video controls playsinline preload="metadata"><source src="video5451420070770212367.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
-<div style="padding:16px 18px;background:#fff"><b style="color:#0a2342">Objetivo do vídeo:</b> <span style="color:var(--gray-600)">Mostrar a quebra da autossuficiência. O rapaz não precisa de mais disciplina, precisa de encontro. A praia que era palco de performance vira lugar de rendição.</span></div>
-</div>
-</div>
+<div class="video-wrap"><video controls playsinline preload="metadata"><source src="video5451420070770212367.mp4" type="video/mp4"></video><div style="padding:12px 16px;background:#fff;font-size:.92rem;color:#475569"><b style="color:#0a2342">Objetivo:</b> Mostrar quebra da autossuficiência. Praia que era palco de performance vira lugar de rendição.</div></div>
+</div></div>
 
-</div>
-</section>
+</div></div></section>
 
-<footer>
-<div class="container">
-<p><b style="color:#f4d35e">Rádio Mateus 6:33</b> • Método 5W2H em Duas Voltas • Tese Oficial desde a primeira versão</p>
-<p style="margin-top:6px;font-size:.85rem">Volta 1: Ouvir para compreender • Dobradiça: Pergunta de transição com contraste • Volta 2: Apresentar para transformar</p>
-<p style="margin-top:14px"><a href="#volta1">Volta 1</a> • <a href="#dobradica">Dobradiça</a> • <a href="#volta2">Volta 2</a> • <a href="#casos">Casos</a></p>
-</div>
-</footer>
+<footer><div class="container"><p><b style="color:#f4d35e">Rádio Mateus 6:33</b> • Método 5W2H em Duas Voltas • Tese Oficial • Layout horizontal blocos sobre blocos</p><p style="margin-top:6px;font-size:.82rem">Volta 1: Ouvir • Dobradiça: Azul escuro #0a2342 • Volta 2: Apresentar</p></div></footer>
+<script>
+// mantém cards abertos como no modelo horizontal oficial
+document.querySelectorAll('.method-card').forEach(c=>c.classList.add('active'));
+</script>
 </body>
 </html>

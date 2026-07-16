@@ -766,6 +766,33 @@ footer {
   margin-top: 1rem !important;
 }
 
+
+/* AJUSTE FINAL - TODOS OS CARDS MESMA LARGURA EMPILHADOS */
+.card,
+.method-card,
+.method-card.active {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  flex: 0 0 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Garante que containers de cards fiquem em coluna única */
+#historia .container > div[style*="display:flex"],
+#volta1 .container > div[style*="display:flex"],
+#volta2 .container > div[style*="display:flex"],
+#casos .container > div[style*="display:flex"],
+#cine-5w2h .container > div[style*="display:flex"],
+#biblioteca-5w2h .container > div[style*="display:flex"] {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+}
+
 </style>
 <style>
 /* Ajustes extras para manter seu azul escuro aprovado */
